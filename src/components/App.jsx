@@ -5,116 +5,185 @@ import { translate } from '../lib/I18n'
 import classNames from 'classnames'
 
 
-var RecipientForm = React.createClass({
+
+class ShareForm extends React.Component {
     propTypes: {
-        email: React.PropTypes.string.isRequired,
-        url: React.PropTypes.string.isRequired
-    },
-    onEmailInput: function(e) {
-        this.props.email = e.target.value
-    },
-    onUrlInput: function(e) {
-        this.props.url = e.target.value
-    },
-    render: function() {
+        instance: React.PropTypes.string
+    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            instance: props.instance,
+            docType: '',
+            id: '',
+            email: '',
+            url: '',
+            sharingType: ''
+        };
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+
+    }
+
+    handleInputChange(event) {
+        const target = event.target;
+
+        if(target.type === 'checkbox') {
+            if(!target.checked){
+                return;
+            }
+        }
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({[name]: value});
+
+
+    }
+    onSubmit(event) {
+        event.preventDefault()
+        this.setState({}, this.sendFormData);
+    }
+
+    render() {
         return (
-            React.createElement('div', {},
-                React.createElement('label', {}, "With who?"),
-                React.createElement('input', {
-                    type: 'text',
-                    placeholder: 'Email',
-                    value: this.props.email,
-                    onInput: this.onEmailInput,
-                }),
-                React.createElement('input', {
-                    type: 'text',
-                    placeholder: 'URL',
-                    value: this.props.url,
-                    onInput: this.onUrlInput,
-                }),
-            )
+            <div>
+                <h1>Sharotronic 2000</h1>
+                <form onSubmit={this.onSubmit} className={'ShareForm'}>
+                    <label>Share what?</label>
+                        <input
+                            type='text'
+                            name="instance"
+                            placeholder={this.props.instance}
+                            value={this.state.instance}
+                            onInput={this.handleInputChange} >
+                        </input>
+                    <input
+                        type='text'
+                        name="docType"
+                        placeholder='DocType'
+                        value={this.state.docType}
+                        onInput={this.handleInputChange} >
+                    </input>
+                    <input
+                        type='text'
+                        name="id"
+                        placeholder='ID'
+                        value={this.state.id}
+                        onInput={this.handleInputChange} >
+                    </input>
+                    <div>
+                        <label>With who?</label>
+                        <input
+                            type='text'
+                            name="email"
+                            placeholder='Email'
+                            value={this.state.email}
+                            onInput={this.handleInputChange} >
+                        </input>
+                        <input
+                            type='text'
+                            name="url"
+                            placeholder='URL'
+                            value={this.state.url}
+                            onInput={this.handleInputChange} >
+                        </input>
+                    </div>
+                    <div>
+                        <label>
+                            One-shot
+                            <input
+                                name="sharingType"
+                                value="one-shot"
+                                type="checkbox"
+                                onChange={this.handleInputChange} />
+                        </label>
+                        <label>
+                            Master-slave
+                            <input
+                                name="sharingType"
+                                value="master-slave"
+                                type="checkbox"
+                                onChange={this.handleInputChange} />
+                        </label>
+                    </div>
+                    <button type='submit'>
+                        Share it!
+                    </button>
+
+                </form>
+            </div>
+
         )
     }
-})
+    sendFormData() {
 
-var ShareForm = React.createClass({
-    propTypes: {
-        target: React.PropTypes.string.isRequired,
-        docType: React.PropTypes.string.isRequired,
-        id: React.PropTypes.string.isRequired,
-        onChange: React.PropTypes.func.isRequired,
-    },
-    onDocTypeInput: function(e) {
-        this.props.docType = e.target.value
-    },
-    onIdInput: function(e) {
-        this.props.id = e.target.value
-    },
-    onSubmit: function(e) {
-        //e.preventDefault()
-        console.log('LOG submit : ' + this.props.docType)
-        console.log('LOG submit : ' + this.props.id)
-        //this.props.onSubmit()
-    },
+        var perm = {
+            tests: {
+                description: "desc",
+                type: this.state.docType,
+                verbs: ["GET", "POST", "PUT"],
+                values: [this.state.id]
+            }
+        }
 
-    render: function() {
-        return (
-            React.createElement('form', {method: "POST", action: this.props.target, onSubmit: this.onSubmit, className: 'ShareForm'},
-                React.createElement('label', {}, "Share what?"),
-                React.createElement('input', {
-                    type: 'text',
-                    placeholder: 'DocType',
-                    value: this.props.docType,
-                    onInput: this.onDocTypeInput,
-                }),
-                React.createElement('input', {
-                    type: 'text',
-                    placeholder: 'Doc id',
-                    value: this.props.id,
-                    onInput: this.onIdInput,
-                }),
-                React.createElement(RecipientForm, {email: "", url: ""}),
-                React.createElement('button', {type: 'submit'}, "Share it!")
-            )
-        )
-    },
-    sendFormData: function () {
-        // Fetch form values.
         var formData = {
-            budget: React.findDOMNode(this.refs.budget).value,
-            company: React.findDOMNode(this.refs.company).value,
-            email: React.findDOMNode(this.refs.email).value
-        };
+            sharing_type: this.state.sharingType,
+            permissions: perm,
+            desc: "Share it share it !"
+        }
 
-        // Send the form data.
+        var recipient = {
+            email: this.state.email,
+            url: this.state.url
+        }
+        console.log("instance : ", this.state.instance)
+        
+        var _this = this;
+        var recipientTarget = this.state.instance + "/sharings/recipient"
+        // Create the recipient
+        this.sendXHR(recipientTarget, recipient, function(res) {
+            var rec = {
+                type: "io.cozy.recipients",
+                id: res.id
+            };
+            var recipients = [{
+                recipient: rec
+            }];
+            formData.recipients = recipients
+            console.log("data : ", JSON.stringify(formData))
+            var sharingTarget = _this.state.instance + "/sharings/"
+            // Create the sharing
+            _this.sendXHR(sharingTarget, formData, function(res) {
+                console.log("Sharing ok : ", JSON.stringify(res))
+            })
+        })
+
+
+    }
+
+    sendXHR(target, data, callback) {
         var xmlhttp = new XMLHttpRequest();
         var _this = this;
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState === 4) {
                 var response = JSON.parse(xmlhttp.responseText);
-                if (xmlhttp.status === 200 && response.status === 'OK') {
-                    _this.setState({ type: 'success', message: 'We have received your message and will get in touch shortly. Thanks!' });
+                if (xmlhttp.status === 200 || xmlhttp.status === 201) {
+                    callback(response.data)
                 }
                 else {
-                    _this.setState({ type: 'danger', message: 'Sorry, there has been an error. Please try again later or send us an email at info@example.com.' });
+                    console.log("error : ", response.errors)
                 }
             }
         };
-        xmlhttp.open('POST', 'send', true);
-        xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xmlhttp.send(this.requestBuildQueryString(formData));
-    },
-});
+        xmlhttp.open('POST', target, true);
+        xmlhttp.setRequestHeader('Content-type', 'application/json');
+        xmlhttp.send(JSON.stringify(data));
+    }
+}
 
 const App = ({ t }) => (
-    React.createElement(ShareForm, {
-        target: "http://cozy1.local:8080/sharings/",
-        docType: "",
-        id: "",
-        onChange: function(share) {
-            console.log('LOG  change')
-        }
-    })
+    React.createElement(ShareForm, {instance: "http://cozy1.local:8080"})
 )
 
 export default translate()(App)
