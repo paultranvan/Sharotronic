@@ -138,7 +138,7 @@ class ShareForm extends React.Component {
             url: this.state.url
         }
         console.log("instance : ", this.state.instance)
-        
+
         var _this = this;
         var recipientTarget = this.state.instance + "/sharings/recipient"
         // Create the recipient
@@ -172,7 +172,7 @@ class ShareForm extends React.Component {
                     callback(response.data)
                 }
                 else {
-                    console.log("error : ", response.errors)
+                    console.log("error : ", JSON.stringify(response.errors))
                 }
             }
         };
