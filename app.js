@@ -18137,7 +18137,7 @@
 	                    if (xmlhttp.status === 200 || xmlhttp.status === 201) {
 	                        callback(response.data);
 	                    } else {
-	                        console.log("error : ", response.errors);
+	                        console.log("error : ", JSON.stringify(response.errors));
 	                    }
 	                }
 	            };
