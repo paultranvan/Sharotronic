@@ -1,6 +1,6 @@
 {
-  "name": "cozy-test",
-  "slug": "cozy-test",
+  "name": "cozy-sharing",
+  "slug": "cozy-sharing",
   "icon": "icon.svg",
   "description": "A testing cozy app",
   "version": "3.0.0",

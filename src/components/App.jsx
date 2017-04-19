@@ -158,8 +158,6 @@ class ShareForm extends React.Component {
                 console.log("Sharing ok : ", JSON.stringify(res))
             })
         })
-
-
     }
 
     sendXHR(target, data, callback) {
