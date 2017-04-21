@@ -11,7 +11,7 @@ class ShareForm extends React.Component {
         var instance = data.cozyDomain
 
         if(data.cozyDomain != "cozy.tools:8080") {
-            instance = "https"+instance
+            instance = "https://"+instance
         }
         else {
             instance = "http://"+instance

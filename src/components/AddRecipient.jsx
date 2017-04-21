@@ -13,7 +13,7 @@ class AddRecipientForm extends React.Component {
         super(props);
         var instance = data.cozyDomain
         if(instance != "cozy.tools:8080") {
-            instance = "https"+instance
+            instance = "https://"+instance
         }
         else {
             instance = "http://"+instance
