@@ -94,7 +94,7 @@ class AddRecipientForm extends React.Component {
         var sid = this.state.sharingid
         var rid = this.state.recid
         if(rid != '') {
-            this.addRecipient(rid)
+            this.addRecipient(sid, rid)
         } else {
             var target = this.state.instance+"/sharings/recipient"
             var args = {
@@ -104,13 +104,13 @@ class AddRecipientForm extends React.Component {
             var _this = this
             this.sendXHR("POST", target, args, function(res) {
                 console.log("create rec : ", JSON.stringify(res))
-                var rid = res.id
-                _this.addRecipient(rid)
+                rid = res.id
+                _this.addRecipient(sid, rid)
             })
         }
     }
 
-    addRecipient(rid) {
+    addRecipient(sid, rid) {
         var target = this.state.instance + "/sharings/"+sid
         var args = {
             ID: rid,
