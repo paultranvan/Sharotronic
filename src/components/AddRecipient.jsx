@@ -94,17 +94,18 @@ class AddRecipientForm extends React.Component {
         var sid = this.state.sharingid
         var rid = this.state.recid
         if(rid != '') {
-            addRecipient(rid)
+            this.addRecipient(rid)
         } else {
             var target = this.state.instance+"/sharings/recipient"
             var args = {
                 email: this.state.email,
                 url: this.state.url
             }
+            var _this = this
             this.sendXHR("POST", target, args, function(res) {
                 console.log("create rec : ", JSON.stringify(res))
                 var rid = res.id
-                addRecipient(rid)
+                _this.addRecipient(rid)
             })
         }
     }
