@@ -52,6 +52,13 @@ class AddRecipientForm extends React.Component {
                     <label>Which sharing?</label>
                     <input
                         type='text'
+                        name="instance"
+                        placeholder={this.state.instance}
+                        value={this.state.instance}
+                        onInput={this.handleInputChange} >
+                    </input>
+                    <input
+                        type='text'
                         name="sharingid"
                         placeholder='Sharing DocID'
                         value={this.state.sharingid}
@@ -111,7 +118,7 @@ class AddRecipientForm extends React.Component {
     }
 
     addRecipient(sid, rid) {
-        var target = this.state.instance + "/sharings/"+sid
+        var target = this.state.instance + "/sharings/"+sid+"/recipient"
         var args = {
             ID: rid,
             Type: "io.cozy.recipients"

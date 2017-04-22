@@ -69,6 +69,13 @@ class ShareForm extends React.Component {
                     <label>Share what?</label>
                     <input
                         type='text'
+                        name="instance"
+                        placeholder={this.state.instance}
+                        value={this.state.instance}
+                        onInput={this.handleInputChange} >
+                    </input>
+                    <input
+                        type='text'
                         name="docType"
                         placeholder='DocType'
                         value={this.state.docType}
