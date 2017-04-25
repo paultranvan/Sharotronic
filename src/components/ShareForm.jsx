@@ -138,7 +138,6 @@ class ShareForm extends React.Component {
             tests: {
                 description: "desc",
                 type: this.state.docType,
-                verbs: ["GET", "POST", "PUT"],
                 values: [this.state.id]
             }
         }
