@@ -1,11 +1,11 @@
 {
-  "name": "cozy-test",
-  "slug": "cozy-test",
+  "name": "cozy-sharing",
+  "slug": "cozy-sharing",
   "icon": "icon.svg",
   "description": "A testing cozy app",
   "version": "3.0.0",
   "licence": "AGPL-3.0",
-  "source": "https://github.com/Gara64/cozy-apps.git@build",
+  "source": "https://github.com/Gara64/cozy-apps.git",
   "developer": {
     "name": "Cozy",
     "url": "https://cozy.io"
@@ -24,6 +24,18 @@
       "description": "Required by the cozy-bar to display the icons of the apps",
       "type": "io.cozy.apps",
       "verbs": ["GET"]
+  },
+    "sharings": {
+        "description": "share",
+        "type": "io.cozy.sharings"
+    },
+    "recipients": {
+        "description": "sharing recipients",
+        "type": "io.cozy.recipients"
+    },
+    "settings": {
+        "description": "cozy settings",
+        "type": "io.cozy.settings"
     }
   }
 }
