@@ -10,7 +10,7 @@ class ShareForm extends React.Component {
         super(props);
         var instance = data.cozyDomain
 
-        if(data.cozyDomain.indexOf(':8080') > -1 {
+        if(data.cozyDomain.indexOf(':8080') > -1) {
             instance = "http://"+instance
         }
         else {
