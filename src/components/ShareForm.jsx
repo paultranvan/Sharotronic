@@ -145,7 +145,7 @@ class ShareForm extends React.Component {
             tests: {
                 description: "desc",
                 type: this.state.docType,
-                values: [this.state.id]
+                values: [this.state.id],
                 selector: this.state.selector
             }
         }
