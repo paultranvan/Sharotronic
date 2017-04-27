@@ -21,6 +21,7 @@ class ShareForm extends React.Component {
             instance: instance,
             docType: '',
             id: '',
+            selector: '',
             email: '',
             url: '',
             sharingType: ''
@@ -48,16 +49,6 @@ class ShareForm extends React.Component {
     }
 
     render() {
-        /*const sharingIndex = cozy.client.data.defineIndex("io.cozy.sharings", ['sharing_id'])
-        let promise = cozy.client.data.query(sharingIndex, {
-            "selector": {"sharing_id": {"$gt": null}}
-        })
-        promise.then(function(result){
-            console.log('done', result);
-        })
-        promise.catch(function(err){
-            console.log('fail', err);
-        })*/
         let promise = cozy.client.settings.getInstance()
         promise.then(function(res) {
             console.log('promise res : ', JSON.stringify(res))
@@ -87,6 +78,13 @@ class ShareForm extends React.Component {
                         name="id"
                         placeholder='ID'
                         value={this.state.id}
+                        onInput={this.handleInputChange} >
+                    </input>
+                    <input
+                        type='text'
+                        name="selector"
+                        placeholder='Selector'
+                        value={this.state.selector}
                         onInput={this.handleInputChange} >
                     </input>
                     <div>
@@ -123,6 +121,14 @@ class ShareForm extends React.Component {
                                 type="checkbox"
                                 onChange={this.handleInputChange} />
                         </label>
+                        <label>
+                            Master-Master
+                            <input
+                                name="sharingType"
+                                value="master-master"
+                                type="checkbox"
+                                onChange={this.handleInputChange} />
+                        </label>
                     </div>
                     <button type='submit'>
                         Share it!
@@ -134,11 +140,13 @@ class ShareForm extends React.Component {
     }
     sendFormData() {
 
+
         var perm = {
             tests: {
                 description: "desc",
                 type: this.state.docType,
                 values: [this.state.id]
+                selector: this.state.selector
             }
         }
 
