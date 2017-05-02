@@ -139,16 +139,36 @@ class ShareForm extends React.Component {
         )
     }
     sendFormData() {
+        var perm = {}
 
-
-        var perm = {
-            tests: {
-                description: "desc",
-                type: this.state.docType,
-                values: [this.state.id],
-                selector: this.state.selector
+        // Particular case for album: generate the doc album permission
+        if(this.state.type == 'io.cozy.album') {
+            var permAlbum = {
+                album: {
+                    description: "photo album",
+                    type: this.state.docType,
+                    values: this.state.id
+                },
+                photos: {
+                    description: "photos",
+                    type: "io.cozy.files",
+                    values: this.state.id,
+                    selector: this.state.selector
+                }
+            };
+            perm = permAlbum;
+        }
+        else {
+            perm = {
+                tests: {
+                    description: "desc",
+                    type: this.state.docType,
+                    values: [this.state.id],
+                    selector: this.state.selector
+                }
             }
         }
+
 
         var formData = {
             sharing_type: this.state.sharingType,
