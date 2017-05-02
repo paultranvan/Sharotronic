@@ -26,7 +26,7 @@ class ProTips extends React.Component {
                         <li>The sharer instance url should already be completed.
                             If not (typically in local), you need to provide it.</li>
                         <li>The DocType field is the data type to share, e.g.
-                            <i>io.cozy.files</i>, <i>io.cozy.album</i>, <i>io.cozy.tests</i>, etc</li>
+                            <i>io.cozy.files</i>, <i>io.cozy.photos.albums</i>, <i>io.cozy.tests</i>, etc</li>
                         <li>The Values field is the id of the shared object.
                             It can be a "static" id, e.g. a file, or a "container" id,
                             e.g. an album</li>
@@ -45,7 +45,7 @@ class ProTips extends React.Component {
                     <ul>
                         <li>Which sharing?</li>
                         <ul>
-                            <li>The sharer instance url should already be completed.
+                            <li>The sharer instance u04a1f2c918affcf2da8e032a3700040erl should already be completed.
                                 If not (typically in local), you need to provide it.
                             </li>
                             <li>The Sharing DocID field expect the id of the sharing doc.
