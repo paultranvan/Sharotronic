@@ -149,7 +149,7 @@ class ShareForm extends React.Component {
                     type: this.state.docType,
                     values: this.state.id
                 },
-                photos: {
+                "io.cozy.photos.albums": {
                     description: "photos",
                     type: "io.cozy.files",
                     values: this.state.id,
