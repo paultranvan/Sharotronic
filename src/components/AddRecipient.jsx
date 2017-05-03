@@ -12,11 +12,11 @@ class AddRecipientForm extends React.Component {
     constructor(props) {
         super(props);
         var instance = data.cozyDomain
-        if(instance != "cozy.tools:8080") {
-            instance = "https://"+instance
+        if(data.cozyDomain.indexOf(':8080') > -1) {
+            instance = "http://"+instance
         }
         else {
-            instance = "http://"+instance
+            instance = "https://"+instance
         }
         this.state = {
             instance: instance,
