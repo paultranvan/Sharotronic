@@ -39469,10 +39469,10 @@
 	        var _this2 = _possibleConstructorReturn(this, (AddRecipientForm.__proto__ || Object.getPrototypeOf(AddRecipientForm)).call(this, props));
 	
 	        var instance = data.cozyDomain;
-	        if (instance != "cozy.tools:8080") {
-	            instance = "https://" + instance;
-	        } else {
+	        if (data.cozyDomain.indexOf(':8080') > -1) {
 	            instance = "http://" + instance;
+	        } else {
+	            instance = "https://" + instance;
 	        }
 	        _this2.state = {
 	            instance: instance,
@@ -39853,7 +39853,7 @@
 	                        type: this.state.docType,
 	                        values: this.state.id
 	                    },
-	                    "io.cozy.photos.albums": {
+	                    photos: {
 	                        description: "photos",
 	                        type: "io.cozy.files",
 	                        values: this.state.id,
