@@ -39469,10 +39469,10 @@
 	        var _this2 = _possibleConstructorReturn(this, (AddRecipientForm.__proto__ || Object.getPrototypeOf(AddRecipientForm)).call(this, props));
 	
 	        var instance = data.cozyDomain;
-	        if (data.cozyDomain.indexOf(':8080') > -1) {
-	            instance = "http://" + instance;
-	        } else {
+	        if (instance != "cozy.tools:8080") {
 	            instance = "https://" + instance;
+	        } else {
+	            instance = "http://" + instance;
 	        }
 	        _this2.state = {
 	            instance: instance,
@@ -39853,7 +39853,7 @@
 	                        type: this.state.docType,
 	                        values: this.state.id
 	                    },
-	                    photos: {
+	                    "io.cozy.photos.albums": {
 	                        description: "photos",
 	                        type: "io.cozy.files",
 	                        values: this.state.id,
@@ -39897,7 +39897,15 @@
 	                }];
 	                formData.recipients = recipients;
 	                console.log("data : ", JSON.stringify(formData));
-	                var sharingTarget = _this.state.instance + "/sharings/";
+	                // TEMPORARY TEST
+	                var sharingTarget = "";
+	                if (data.cozyDomain.indexOf(':8080') > -1) {
+	                    sharingTarget = _this.state.instance + "/sharings/";
+	                } else {
+	                    sharingTarget = "/sharings/";
+	                }
+	                //var sharingTarget = _this.state.instance + "/sharings/"
+	                console.log("sharing target " + sharingTarget);
 	                // Create the sharing
 	                _this.sendXHR(sharingTarget, formData, function (res) {
 	                    console.log("Sharing ok : ", JSON.stringify(res));
