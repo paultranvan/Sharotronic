@@ -39360,12 +39360,11 @@
 	                    },
 	                    album: {
 	                        description: "photo album",
-	                        type: [this.state.docType],
-	                        values: this.state.id
+	                        type: this.state.docType,
+	                        values: [this.state.id]
 	                    }
 	                };
 	                console.log('album sharing : ' + JSON.stringify(perm));
-	                //perm = permAlbum;
 	            } else {
 	                perm = {
 	                    tests: {
