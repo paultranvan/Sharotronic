@@ -144,14 +144,6 @@ class ShareForm extends React.Component {
         // Particular case for album: generate the doc album permission
         if(this.state.docType == 'io.cozy.photos.albums') {
             perm = {
-<<<<<<< Updated upstream
-                album: {
-                    description: "photo album",
-                    type: this.state.docType,
-                    values: this.state.id
-                },
-=======
->>>>>>> Stashed changes
                 "io.cozy.photos.albums": {
                     description: "photos",
                     type: "io.cozy.files",
@@ -160,15 +152,11 @@ class ShareForm extends React.Component {
                 },
                 album: {
                     description: "photo album",
-                    type: [this.state.docType],
-                    values: this.state.id
+                    type: this.state.docType,
+                    values: [this.state.id]
                 }
             };
-<<<<<<< Updated upstream
-            console.log('album sharing : ' + perm)
-=======
             console.log('album sharing : ' + JSON.stringify(perm))
->>>>>>> Stashed changes
             //perm = permAlbum;
         }
         else {
