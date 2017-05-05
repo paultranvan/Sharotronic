@@ -45,7 +45,7 @@ class ProTips extends React.Component {
                     <ul>
                         <li>Which sharing?</li>
                         <ul>
-                            <li>The sharer instance u04a1f2c918affcf2da8e032a3700040erl should already be completed.
+                            <li>The sharer instance url should already be completed.
                                 If not (typically in local), you need to provide it.
                             </li>
                             <li>The Sharing DocID field expect the id of the sharing doc.
@@ -56,7 +56,7 @@ class ProTips extends React.Component {
                         </ul>
                         <li>Which recipient?</li>
                         <ul>
-                            <li>You can provide an recipientID, or create a new one.
+                            <li>You can provide a recipientID, or create a new one.
                                 For the latter, just give the mail and URL, just like
                                 for the sharing creation
                             </li>
