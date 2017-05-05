@@ -39350,7 +39350,7 @@
 	            var perm = {};
 	
 	            // Particular case for album: generate the doc album permission
-	            if (this.state.type == 'io.cozy.photos.albums') {
+	            if (this.state.docType == 'io.cozy.photos.albums') {
 	                var permAlbum = {
 	                    album: {
 	                        description: "photo album",
