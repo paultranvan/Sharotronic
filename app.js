@@ -39351,7 +39351,7 @@
 	
 	            // Particular case for album: generate the doc album permission
 	            if (this.state.docType == 'io.cozy.photos.albums') {
-	                var permAlbum = {
+	                perm = {
 	                    album: {
 	                        description: "photo album",
 	                        type: this.state.docType,
@@ -39364,7 +39364,8 @@
 	                        selector: this.state.selector
 	                    }
 	                };
-	                perm = permAlbum;
+	                console.log('album sharing : ' + perm);
+	                //perm = permAlbum;
 	            } else {
 	                perm = {
 	                    tests: {
