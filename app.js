@@ -38855,11 +38855,15 @@
 	
 	var _ShareForm2 = _interopRequireDefault(_ShareForm);
 	
+	var _Tips = __webpack_require__(378);
+	
+	var _Tips2 = _interopRequireDefault(_Tips);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var App = function App(_ref) {
 	    var t = _ref.t;
-	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}));
+	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}), _react2.default.createElement(_Tips2.default, {}));
 	};
 	
 	exports.default = (0, _I18n.translate)()(App);
@@ -39193,6 +39197,7 @@
 	            instance: instance,
 	            docType: '',
 	            id: '',
+	            selector: '',
 	            email: '',
 	            url: '',
 	            sharingType: ''
@@ -39226,16 +39231,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            /*const sharingIndex = cozy.client.data.defineIndex("io.cozy.sharings", ['sharing_id'])
-	            let promise = cozy.client.data.query(sharingIndex, {
-	                "selector": {"sharing_id": {"$gt": null}}
-	            })
-	            promise.then(function(result){
-	                console.log('done', result);
-	            })
-	            promise.catch(function(err){
-	                console.log('fail', err);
-	            })*/
 	            var promise = __webpack_provided_cozy_dot_client.settings.getInstance();
 	            promise.then(function (res) {
 	                console.log('promise res : ', JSON.stringify(res));
@@ -39278,6 +39273,12 @@
 	                        name: 'id',
 	                        placeholder: 'ID',
 	                        value: this.state.id,
+	                        onInput: this.handleInputChange }),
+	                    _react2.default.createElement('input', {
+	                        type: 'text',
+	                        name: 'selector',
+	                        placeholder: 'Selector',
+	                        value: this.state.selector,
 	                        onInput: this.handleInputChange }),
 	                    _react2.default.createElement(
 	                        'div',
@@ -39322,6 +39323,16 @@
 	                                value: 'master-slave',
 	                                type: 'checkbox',
 	                                onChange: this.handleInputChange })
+	                        ),
+	                        _react2.default.createElement(
+	                            'label',
+	                            null,
+	                            'Master-Master',
+	                            _react2.default.createElement('input', {
+	                                name: 'sharingType',
+	                                value: 'master-master',
+	                                type: 'checkbox',
+	                                onChange: this.handleInputChange })
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -39336,14 +39347,34 @@
 	    }, {
 	        key: 'sendFormData',
 	        value: function sendFormData() {
+	            var perm = {};
 	
-	            var perm = {
-	                tests: {
-	                    description: "desc",
-	                    type: this.state.docType,
-	                    values: [this.state.id]
-	                }
-	            };
+	            // Particular case for album: generate the doc album permission
+	            if (this.state.type == 'io.cozy.photos.albums') {
+	                var permAlbum = {
+	                    album: {
+	                        description: "photo album",
+	                        type: this.state.docType,
+	                        values: this.state.id
+	                    },
+	                    "io.cozy.photos.albums": {
+	                        description: "photos",
+	                        type: "io.cozy.files",
+	                        values: this.state.id,
+	                        selector: this.state.selector
+	                    }
+	                };
+	                perm = permAlbum;
+	            } else {
+	                perm = {
+	                    tests: {
+	                        description: "desc",
+	                        type: this.state.docType,
+	                        values: [this.state.id],
+	                        selector: this.state.selector
+	                    }
+	                };
+	            }
 	
 	            var formData = {
 	                sharing_type: this.state.sharingType,
@@ -39408,6 +39439,219 @@
 	
 	exports.default = (0, _I18n.translate)()(ShareForm);
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 378 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(198);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _I18n = __webpack_require__(201);
+	
+	var _classnames = __webpack_require__(375);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var data = document.querySelector('[role=application]').dataset;
+	
+	var ProTips = function (_React$Component) {
+	    _inherits(ProTips, _React$Component);
+	
+	    function ProTips() {
+	        _classCallCheck(this, ProTips);
+	
+	        return _possibleConstructorReturn(this, (ProTips.__proto__ || Object.getPrototypeOf(ProTips)).apply(this, arguments));
+	    }
+	
+	    _createClass(ProTips, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Pro Tips to use Sharotronic 2000'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    ' Sharotronics 2000 is the ultime app to share everything you always wanted to. Its smooth interface will litterally blow your mind and improve your life. For this, here are few tips to use it:'
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'strong',
+	                            null,
+	                            'Create Sharing'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            ' Share what?'
+	                        ),
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The sharer instance url should already be completed. If not (typically in local), you need to provide it.'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The DocType field is the data type to share, e.g.',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'io.cozy.files'
+	                                ),
+	                                ', ',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'io.cozy.photos.albums'
+	                                ),
+	                                ', ',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'io.cozy.tests'
+	                                ),
+	                                ', etc'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The Values field is the id of the shared object. It can be a "static" id, e.g. a file, or a "container" id, e.g. an album'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The selector field is useful if you need a "container". For example, a photo album will require ',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'referenced_by'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            ' With who?'
+	                        ),
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'You must provide the mail and complete Cozy URL of your recipient. For example, ',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'paul@cozycloud.cc'
+	                                ),
+	                                ' and ',
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    null,
+	                                    'https://paulsharing2.cozy.works'
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'strong',
+	                            null,
+	                            'Add recipient to sharing'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Which sharing?'
+	                        ),
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The sharer instance u04a1f2c918affcf2da8e032a3700040erl should already be completed. If not (typically in local), you need to provide it.'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'The Sharing DocID field expect the id of the sharing doc. You can retrieve it from the browser\'s logs, after the sharing creation. Be careful, it is NOT the SharingID field.'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            'Which recipient?'
+	                        ),
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'You can provide an recipientID, or create a new one. For the latter, just give the mail and URL, just like for the sharing creation'
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement('img', { src: 'src/assets/science_works.png' })
+	            );
+	        }
+	    }]);
+	
+	    return ProTips;
+	}(_react2.default.Component);
+	
+	var Tips = function Tips(_ref) {
+	    var t = _ref.t;
+	    return _react2.default.createElement(ProTips, {});
+	};
+	
+	exports.default = (0, _I18n.translate)()(Tips);
 
 /***/ }
 /******/ ]);
