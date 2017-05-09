@@ -144,10 +144,10 @@ class ShareForm extends React.Component {
         // Particular case for album: generate the doc album permission
         if(this.state.docType == 'io.cozy.photos.albums') {
             perm = {
-                "io.cozy.photos.albums": {
+                files: {
                     description: "photos",
                     type: "io.cozy.files",
-                    values: [this.state.id],
+                    values: [this.state.docType+"/"+this.state.id],
                     selector: this.state.selector
                 },
                 album: {
