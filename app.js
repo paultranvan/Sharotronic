@@ -39696,7 +39696,8 @@
 	            selector: '',
 	            email: '',
 	            url: '',
-	            sharingType: ''
+	            sharingType: '',
+	            desc: 'Share it share it !'
 	        };
 	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
 	        _this2.onSubmit = _this2.onSubmit.bind(_this2);
@@ -39775,6 +39776,12 @@
 	                        name: 'selector',
 	                        placeholder: 'Selector',
 	                        value: this.state.selector,
+	                        onInput: this.handleInputChange }),
+	                    _react2.default.createElement('input', {
+	                        type: 'text',
+	                        name: 'desc',
+	                        placeholder: '(Optionnal) Description',
+	                        value: this.state.desc,
 	                        onInput: this.handleInputChange }),
 	                    _react2.default.createElement(
 	                        'div',
@@ -39876,7 +39883,7 @@
 	            var formData = {
 	                sharing_type: this.state.sharingType,
 	                permissions: perm,
-	                desc: "Share it share it !"
+	                desc: this.state.desc
 	            };
 	
 	            var recipient = {
