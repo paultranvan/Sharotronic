@@ -24,7 +24,8 @@ class ShareForm extends React.Component {
             selector: '',
             email: '',
             url: '',
-            sharingType: ''
+            sharingType: '',
+            desc: 'Share it share it !'
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -87,6 +88,13 @@ class ShareForm extends React.Component {
                         value={this.state.selector}
                         onInput={this.handleInputChange} >
                     </input>
+                    <input
+                        type='text'
+                        name="desc"
+                        placeholder='(Optionnal) Description'
+                        value={this.state.desc}
+                        onInput={this.handleInputChange} >
+                    </input>
                     <div>
                         <label>With who?</label>
                         <input
@@ -103,6 +111,7 @@ class ShareForm extends React.Component {
                             value={this.state.url}
                             onInput={this.handleInputChange} >
                         </input>
+
                     </div>
                     <div>
                         <label>
@@ -174,7 +183,7 @@ class ShareForm extends React.Component {
         var formData = {
             sharing_type: this.state.sharingType,
             permissions: perm,
-            desc: "Share it share it !"
+            desc: this.state.desc
         }
 
         var recipient = {
