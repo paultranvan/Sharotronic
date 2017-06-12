@@ -94,6 +94,7 @@ class AddRecipientForm extends React.Component {
                         Add Recipient
                     </button>
                 </form>
+                <hr></hr>
             </div>
         )
     }
