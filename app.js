@@ -42,14 +42,14 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(1);
 
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_cozy_dot_client, __webpack_provided_cozy_dot_bar) {'use strict';
 	
@@ -233,9 +233,9 @@
 	
 	var _reactDom = __webpack_require__(198);
 	
-	var _I18n = __webpack_require__(208);
+	var _I18n = __webpack_require__(201);
 	
-	var _App = __webpack_require__(379);
+	var _App = __webpack_require__(372);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
@@ -264,9 +264,9 @@
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)))
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
@@ -9580,9 +9580,9 @@
 	;
 	//# sourceMappingURL=cozy-client.js.map
 
-/***/ }),
+/***/ },
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var css = __webpack_require__(4);
@@ -21156,18 +21156,18 @@
 	//# sourceMappingURL=cozy-bar.js.map
 
 
-/***/ }),
+/***/ },
 /* 4 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
-/***/ }),
+/***/ },
 /* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export      = __webpack_require__(9)
@@ -21216,9 +21216,9 @@
 	
 	__webpack_require__(50)(ARRAY_BUFFER);
 
-/***/ }),
+/***/ },
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(10)
 	  , core      = __webpack_require__(11)
@@ -21264,25 +21264,25 @@
 	$export.R = 128; // real proto method for `library` 
 	module.exports = $export;
 
-/***/ }),
+/***/ },
 /* 10 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 	var global = module.exports = typeof window != 'undefined' && window.Math == Math
 	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
-/***/ }),
+/***/ },
 /* 11 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
-/***/ }),
+/***/ },
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var dP         = __webpack_require__(13)
 	  , createDesc = __webpack_require__(21);
@@ -21293,9 +21293,9 @@
 	  return object;
 	};
 
-/***/ }),
+/***/ },
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var anObject       = __webpack_require__(14)
 	  , IE8_DOM_DEFINE = __webpack_require__(16)
@@ -21314,9 +21314,9 @@
 	  return O;
 	};
 
-/***/ }),
+/***/ },
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(15);
 	module.exports = function(it){
@@ -21324,34 +21324,34 @@
 	  return it;
 	};
 
-/***/ }),
+/***/ },
 /* 15 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(it){
 	  return typeof it === 'object' ? it !== null : typeof it === 'function';
 	};
 
-/***/ }),
+/***/ },
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = !__webpack_require__(17) && !__webpack_require__(18)(function(){
 	  return Object.defineProperty(__webpack_require__(19)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
-/***/ }),
+/***/ },
 /* 17 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
 	module.exports = !__webpack_require__(18)(function(){
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
-/***/ }),
+/***/ },
 /* 18 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(exec){
 	  try {
@@ -21361,9 +21361,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 19 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(15)
 	  , document = __webpack_require__(10).document
@@ -21373,9 +21373,9 @@
 	  return is ? document.createElement(it) : {};
 	};
 
-/***/ }),
+/***/ },
 /* 20 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
 	var isObject = __webpack_require__(15);
@@ -21390,9 +21390,9 @@
 	  throw TypeError("Can't convert object to primitive value");
 	};
 
-/***/ }),
+/***/ },
 /* 21 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(bitmap, value){
 	  return {
@@ -21403,9 +21403,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 22 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(10)
 	  , hide      = __webpack_require__(12)
@@ -21440,18 +21440,18 @@
 	  return typeof this == 'function' && this[SRC] || $toString.call(this);
 	});
 
-/***/ }),
+/***/ },
 /* 23 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
 	module.exports = function(it, key){
 	  return hasOwnProperty.call(it, key);
 	};
 
-/***/ }),
+/***/ },
 /* 24 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var id = 0
 	  , px = Math.random();
@@ -21459,9 +21459,9 @@
 	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 	};
 
-/***/ }),
+/***/ },
 /* 25 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
 	var aFunction = __webpack_require__(26);
@@ -21484,18 +21484,18 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 26 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(it){
 	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
 	  return it;
 	};
 
-/***/ }),
+/***/ },
 /* 27 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(10)
 	  , hide   = __webpack_require__(12)
@@ -21524,9 +21524,9 @@
 	  VIEW:   VIEW
 	};
 
-/***/ }),
+/***/ },
 /* 28 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var global         = __webpack_require__(10)
@@ -21802,15 +21802,15 @@
 	exports[ARRAY_BUFFER] = $ArrayBuffer;
 	exports[DATA_VIEW] = $DataView;
 
-/***/ }),
+/***/ },
 /* 29 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = false;
 
-/***/ }),
+/***/ },
 /* 30 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var redefine = __webpack_require__(22);
 	module.exports = function(target, src, safe){
@@ -21818,9 +21818,9 @@
 	  return target;
 	};
 
-/***/ }),
+/***/ },
 /* 31 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(it, Constructor, name, forbiddenField){
 	  if(!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)){
@@ -21828,9 +21828,9 @@
 	  } return it;
 	};
 
-/***/ }),
+/***/ },
 /* 32 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
 	var ceil  = Math.ceil
@@ -21839,9 +21839,9 @@
 	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 	};
 
-/***/ }),
+/***/ },
 /* 33 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
 	var toInteger = __webpack_require__(32)
@@ -21850,9 +21850,9 @@
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
-/***/ }),
+/***/ },
 /* 34 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 	var $keys      = __webpack_require__(35)
@@ -21862,9 +21862,9 @@
 	  return $keys(O, hiddenKeys);
 	};
 
-/***/ }),
+/***/ },
 /* 35 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var has          = __webpack_require__(23)
 	  , toIObject    = __webpack_require__(36)
@@ -21884,9 +21884,9 @@
 	  return result;
 	};
 
-/***/ }),
+/***/ },
 /* 36 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
 	var IObject = __webpack_require__(37)
@@ -21895,9 +21895,9 @@
 	  return IObject(defined(it));
 	};
 
-/***/ }),
+/***/ },
 /* 37 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
 	var cof = __webpack_require__(38);
@@ -21905,9 +21905,9 @@
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
-/***/ }),
+/***/ },
 /* 38 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var toString = {}.toString;
 	
@@ -21915,9 +21915,9 @@
 	  return toString.call(it).slice(8, -1);
 	};
 
-/***/ }),
+/***/ },
 /* 39 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
 	module.exports = function(it){
@@ -21925,9 +21925,9 @@
 	  return it;
 	};
 
-/***/ }),
+/***/ },
 /* 40 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
@@ -21951,9 +21951,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 41 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(32)
 	  , max       = Math.max
@@ -21963,9 +21963,9 @@
 	  return index < 0 ? max(index + length, 0) : min(index, length);
 	};
 
-/***/ }),
+/***/ },
 /* 42 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var shared = __webpack_require__(43)('keys')
 	  , uid    = __webpack_require__(24);
@@ -21973,9 +21973,9 @@
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
-/***/ }),
+/***/ },
 /* 43 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(10)
 	  , SHARED = '__core-js_shared__'
@@ -21984,18 +21984,18 @@
 	  return store[key] || (store[key] = {});
 	};
 
-/***/ }),
+/***/ },
 /* 44 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
 	module.exports = (
 	  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
 	).split(',');
 
-/***/ }),
+/***/ },
 /* 45 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 	'use strict';
@@ -22013,9 +22013,9 @@
 	  return O;
 	};
 
-/***/ }),
+/***/ },
 /* 46 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
 	var defined = __webpack_require__(39);
@@ -22023,9 +22023,9 @@
 	  return Object(defined(it));
 	};
 
-/***/ }),
+/***/ },
 /* 47 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var def = __webpack_require__(13).f
 	  , has = __webpack_require__(23)
@@ -22035,9 +22035,9 @@
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
-/***/ }),
+/***/ },
 /* 48 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var store      = __webpack_require__(43)('wks')
 	  , uid        = __webpack_require__(24)
@@ -22051,9 +22051,9 @@
 	
 	$exports.store = store;
 
-/***/ }),
+/***/ },
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.3.20 SpeciesConstructor(O, defaultConstructor)
 	var anObject  = __webpack_require__(14)
@@ -22064,9 +22064,9 @@
 	  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
 	};
 
-/***/ }),
+/***/ },
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var global      = __webpack_require__(10)
@@ -22082,9 +22082,9 @@
 	  });
 	};
 
-/***/ }),
+/***/ },
 /* 51 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Int8', 1, function(init){
 	  return function Int8Array(data, byteOffset, length){
@@ -22092,9 +22092,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	if(__webpack_require__(17)){
@@ -22576,18 +22576,18 @@
 	  };
 	} else module.exports = function(){ /* empty */ };
 
-/***/ }),
+/***/ },
 /* 53 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 7.2.9 SameValue(x, y)
 	module.exports = Object.is || function is(x, y){
 	  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
 	};
 
-/***/ }),
+/***/ },
 /* 54 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// getting tag from 19.1.3.6 Object.prototype.toString()
 	var cof = __webpack_require__(38)
@@ -22613,9 +22613,9 @@
 	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
 	};
 
-/***/ }),
+/***/ },
 /* 55 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// check on default Array iterator
 	var Iterators  = __webpack_require__(56)
@@ -22626,15 +22626,15 @@
 	  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
 	};
 
-/***/ }),
+/***/ },
 /* 56 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = {};
 
-/***/ }),
+/***/ },
 /* 57 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 	var anObject    = __webpack_require__(14)
@@ -22679,9 +22679,9 @@
 	};
 
 
-/***/ }),
+/***/ },
 /* 58 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var dP       = __webpack_require__(13)
 	  , anObject = __webpack_require__(14)
@@ -22697,9 +22697,9 @@
 	  return O;
 	};
 
-/***/ }),
+/***/ },
 /* 59 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
 	var $keys       = __webpack_require__(35)
@@ -22709,15 +22709,15 @@
 	  return $keys(O, enumBugKeys);
 	};
 
-/***/ }),
+/***/ },
 /* 60 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(10).document && document.documentElement;
 
-/***/ }),
+/***/ },
 /* 61 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 	var has         = __webpack_require__(23)
@@ -22733,9 +22733,9 @@
 	  } return O instanceof Object ? ObjectProto : null;
 	};
 
-/***/ }),
+/***/ },
 /* 62 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var classof   = __webpack_require__(54)
 	  , ITERATOR  = __webpack_require__(48)('iterator')
@@ -22746,9 +22746,9 @@
 	    || Iterators[classof(it)];
 	};
 
-/***/ }),
+/***/ },
 /* 63 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 0 -> Array#forEach
 	// 1 -> Array#map
@@ -22795,9 +22795,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 64 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
 	var speciesConstructor = __webpack_require__(65);
@@ -22806,9 +22806,9 @@
 	  return new (speciesConstructor(original))(length);
 	};
 
-/***/ }),
+/***/ },
 /* 65 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(15)
 	  , isArray  = __webpack_require__(66)
@@ -22827,9 +22827,9 @@
 	  } return C === undefined ? Array : C;
 	};
 
-/***/ }),
+/***/ },
 /* 66 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
 	var cof = __webpack_require__(38);
@@ -22837,9 +22837,9 @@
 	  return cof(arg) == 'Array';
 	};
 
-/***/ }),
+/***/ },
 /* 67 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var addToUnscopables = __webpack_require__(68)
@@ -22876,9 +22876,9 @@
 	addToUnscopables('values');
 	addToUnscopables('entries');
 
-/***/ }),
+/***/ },
 /* 68 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.31 Array.prototype[@@unscopables]
 	var UNSCOPABLES = __webpack_require__(48)('unscopables')
@@ -22888,17 +22888,17 @@
 	  ArrayProto[UNSCOPABLES][key] = true;
 	};
 
-/***/ }),
+/***/ },
 /* 69 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(done, value){
 	  return {value: value, done: !!done};
 	};
 
-/***/ }),
+/***/ },
 /* 70 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var LIBRARY        = __webpack_require__(29)
@@ -22971,9 +22971,9 @@
 	  return methods;
 	};
 
-/***/ }),
+/***/ },
 /* 71 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var create         = __webpack_require__(57)
@@ -22989,9 +22989,9 @@
 	  setToStringTag(Constructor, NAME + ' Iterator');
 	};
 
-/***/ }),
+/***/ },
 /* 72 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var ITERATOR     = __webpack_require__(48)('iterator')
 	  , SAFE_CLOSING = false;
@@ -23015,9 +23015,9 @@
 	  return safe;
 	};
 
-/***/ }),
+/***/ },
 /* 73 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 	'use strict';
@@ -23046,9 +23046,9 @@
 	  } return O;
 	};
 
-/***/ }),
+/***/ },
 /* 74 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var pIE            = __webpack_require__(75)
 	  , createDesc     = __webpack_require__(21)
@@ -23067,15 +23067,15 @@
 	  if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
 	};
 
-/***/ }),
+/***/ },
 /* 75 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
-/***/ }),
+/***/ },
 /* 76 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Uint8', 1, function(init){
 	  return function Uint8Array(data, byteOffset, length){
@@ -23083,9 +23083,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 77 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Uint8', 1, function(init){
 	  return function Uint8ClampedArray(data, byteOffset, length){
@@ -23093,9 +23093,9 @@
 	  };
 	}, true);
 
-/***/ }),
+/***/ },
 /* 78 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Int16', 2, function(init){
 	  return function Int16Array(data, byteOffset, length){
@@ -23103,9 +23103,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 79 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Uint16', 2, function(init){
 	  return function Uint16Array(data, byteOffset, length){
@@ -23113,9 +23113,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 80 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Int32', 4, function(init){
 	  return function Int32Array(data, byteOffset, length){
@@ -23123,9 +23123,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 81 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Uint32', 4, function(init){
 	  return function Uint32Array(data, byteOffset, length){
@@ -23133,9 +23133,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 82 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Float32', 4, function(init){
 	  return function Float32Array(data, byteOffset, length){
@@ -23143,9 +23143,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 83 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(52)('Float64', 8, function(init){
 	  return function Float64Array(data, byteOffset, length){
@@ -23153,9 +23153,9 @@
 	  };
 	});
 
-/***/ }),
+/***/ },
 /* 84 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var strong = __webpack_require__(85);
@@ -23175,9 +23175,9 @@
 	  }
 	}, strong, true);
 
-/***/ }),
+/***/ },
 /* 85 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var dP          = __webpack_require__(13).f
@@ -23322,9 +23322,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 86 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var ctx         = __webpack_require__(25)
 	  , call        = __webpack_require__(87)
@@ -23352,9 +23352,9 @@
 	exports.BREAK  = BREAK;
 	exports.RETURN = RETURN;
 
-/***/ }),
+/***/ },
 /* 87 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// call something on iterator step with safe closing on error
 	var anObject = __webpack_require__(14);
@@ -23369,9 +23369,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 88 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var META     = __webpack_require__(24)('meta')
 	  , isObject = __webpack_require__(15)
@@ -23427,9 +23427,9 @@
 	  onFreeze: onFreeze
 	};
 
-/***/ }),
+/***/ },
 /* 89 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var global            = __webpack_require__(10)
@@ -23517,9 +23517,9 @@
 	  return C;
 	};
 
-/***/ }),
+/***/ },
 /* 90 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var isObject       = __webpack_require__(15)
 	  , setPrototypeOf = __webpack_require__(91).set;
@@ -23530,9 +23530,9 @@
 	  } return that;
 	};
 
-/***/ }),
+/***/ },
 /* 91 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// Works with __proto__ only. Old v8 can't work with null proto objects.
 	/* eslint-disable no-proto */
@@ -23560,9 +23560,9 @@
 	  check: check
 	};
 
-/***/ }),
+/***/ },
 /* 92 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var strong = __webpack_require__(85);
@@ -23577,9 +23577,9 @@
 	  }
 	}, strong);
 
-/***/ }),
+/***/ },
 /* 93 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var each         = __webpack_require__(63)(0)
@@ -23638,9 +23638,9 @@
 	  });
 	}
 
-/***/ }),
+/***/ },
 /* 94 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
@@ -23676,15 +23676,15 @@
 	  } return T;
 	} : $assign;
 
-/***/ }),
+/***/ },
 /* 95 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
-/***/ }),
+/***/ },
 /* 96 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var redefineAll       = __webpack_require__(30)
@@ -23770,9 +23770,9 @@
 	  ufstore: uncaughtFrozenStore
 	};
 
-/***/ }),
+/***/ },
 /* 97 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var weak = __webpack_require__(96);
@@ -23787,9 +23787,9 @@
 	  }
 	}, weak, false, true);
 
-/***/ }),
+/***/ },
 /* 98 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
 	var $export   = __webpack_require__(9)
@@ -23808,9 +23808,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 99 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
 	var $export    = __webpack_require__(9)
@@ -23860,9 +23860,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 100 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var aFunction  = __webpack_require__(26)
@@ -23889,9 +23889,9 @@
 	  return bound;
 	};
 
-/***/ }),
+/***/ },
 /* 101 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// fast apply, http://jsperf.lnkit.com/fast-apply/5
 	module.exports = function(fn, args, that){
@@ -23910,9 +23910,9 @@
 	  } return              fn.apply(that, args);
 	};
 
-/***/ }),
+/***/ },
 /* 102 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
 	var dP          = __webpack_require__(13)
@@ -23937,9 +23937,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 103 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.4 Reflect.deleteProperty(target, propertyKey)
 	var $export  = __webpack_require__(9)
@@ -23953,9 +23953,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 104 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.6 Reflect.get(target, propertyKey [, receiver])
 	var gOPD           = __webpack_require__(74)
@@ -23979,9 +23979,9 @@
 	
 	$export($export.S, 'Reflect', {get: get});
 
-/***/ }),
+/***/ },
 /* 105 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 	var gOPD     = __webpack_require__(74)
@@ -23994,9 +23994,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 106 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.8 Reflect.getPrototypeOf(target)
 	var $export  = __webpack_require__(9)
@@ -24009,9 +24009,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 107 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.9 Reflect.has(target, propertyKey)
 	var $export = __webpack_require__(9);
@@ -24022,9 +24022,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 108 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.10 Reflect.isExtensible(target)
 	var $export       = __webpack_require__(9)
@@ -24038,18 +24038,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 109 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.11 Reflect.ownKeys(target)
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Reflect', {ownKeys: __webpack_require__(110)});
 
-/***/ }),
+/***/ },
 /* 110 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// all object keys, includes non-enumerable and symbols
 	var gOPN     = __webpack_require__(34)
@@ -24062,9 +24062,9 @@
 	  return getSymbols ? keys.concat(getSymbols(it)) : keys;
 	};
 
-/***/ }),
+/***/ },
 /* 111 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.12 Reflect.preventExtensions(target)
 	var $export            = __webpack_require__(9)
@@ -24083,9 +24083,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 112 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
 	var dP             = __webpack_require__(13)
@@ -24119,9 +24119,9 @@
 	
 	$export($export.S, 'Reflect', {set: set});
 
-/***/ }),
+/***/ },
 /* 113 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 26.1.14 Reflect.setPrototypeOf(target, proto)
 	var $export  = __webpack_require__(9)
@@ -24139,9 +24139,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 114 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var LIBRARY            = __webpack_require__(29)
@@ -24443,9 +24443,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 115 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var ctx                = __webpack_require__(25)
 	  , invoke             = __webpack_require__(101)
@@ -24523,9 +24523,9 @@
 	  clear: clearTask
 	};
 
-/***/ }),
+/***/ },
 /* 116 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(10)
 	  , macrotask = __webpack_require__(115).set
@@ -24596,9 +24596,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 117 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// ECMAScript 6 symbols shim
@@ -24836,15 +24836,15 @@
 	// 24.3.3 JSON[@@toStringTag]
 	setToStringTag(global.JSON, 'JSON', true);
 
-/***/ }),
+/***/ },
 /* 118 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports.f = __webpack_require__(48);
 
-/***/ }),
+/***/ },
 /* 119 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global         = __webpack_require__(10)
 	  , core           = __webpack_require__(11)
@@ -24856,9 +24856,9 @@
 	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
 	};
 
-/***/ }),
+/***/ },
 /* 120 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(59)
 	  , toIObject = __webpack_require__(36);
@@ -24871,9 +24871,9 @@
 	  while(length > index)if(O[key = keys[index++]] === el)return key;
 	};
 
-/***/ }),
+/***/ },
 /* 121 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
 	var getKeys = __webpack_require__(59)
@@ -24891,9 +24891,9 @@
 	  } return result;
 	};
 
-/***/ }),
+/***/ },
 /* 122 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 	var toIObject = __webpack_require__(36)
@@ -24916,34 +24916,34 @@
 	};
 
 
-/***/ }),
+/***/ },
 /* 123 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
 	var $export = __webpack_require__(9);
 	
 	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(94)});
 
-/***/ }),
+/***/ },
 /* 124 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.10 Object.is(value1, value2)
 	var $export = __webpack_require__(9);
 	$export($export.S, 'Object', {is: __webpack_require__(53)});
 
-/***/ }),
+/***/ },
 /* 125 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.19 Object.setPrototypeOf(O, proto)
 	var $export = __webpack_require__(9);
 	$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(91).set});
 
-/***/ }),
+/***/ },
 /* 126 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var dP         = __webpack_require__(13).f
 	  , createDesc = __webpack_require__(21)
@@ -24971,9 +24971,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 127 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var $export   = __webpack_require__(9)
 	  , toIObject = __webpack_require__(36)
@@ -24994,9 +24994,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 128 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var $export        = __webpack_require__(9)
 	  , toIndex        = __webpack_require__(41)
@@ -25022,9 +25022,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 129 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export = __webpack_require__(9)
@@ -25036,9 +25036,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 130 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(32)
 	  , defined   = __webpack_require__(39);
@@ -25058,9 +25058,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 131 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(9);
 	
@@ -25069,9 +25069,9 @@
 	  repeat: __webpack_require__(132)
 	});
 
-/***/ }),
+/***/ },
 /* 132 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var toInteger = __webpack_require__(32)
@@ -25086,9 +25086,9 @@
 	  return res;
 	};
 
-/***/ }),
+/***/ },
 /* 133 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.18 String.prototype.startsWith(searchString [, position ])
 	'use strict';
@@ -25109,9 +25109,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 134 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// helper for String#{startsWith, endsWith, includes}
 	var isRegExp = __webpack_require__(135)
@@ -25122,9 +25122,9 @@
 	  return String(defined(that));
 	};
 
-/***/ }),
+/***/ },
 /* 135 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.8 IsRegExp(argument)
 	var isObject = __webpack_require__(15)
@@ -25135,9 +25135,9 @@
 	  return isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : cof(it) == 'RegExp');
 	};
 
-/***/ }),
+/***/ },
 /* 136 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var MATCH = __webpack_require__(48)('match');
 	module.exports = function(KEY){
@@ -25152,9 +25152,9 @@
 	  } return true;
 	};
 
-/***/ }),
+/***/ },
 /* 137 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.6 String.prototype.endsWith(searchString [, endPosition])
 	'use strict';
@@ -25177,9 +25177,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 138 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 21.1.3.7 String.prototype.includes(searchString, position = 0)
 	'use strict';
@@ -25194,9 +25194,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 139 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 21.2.5.3 get RegExp.prototype.flags()
 	if(__webpack_require__(17) && /./g.flags != 'g')__webpack_require__(13).f(RegExp.prototype, 'flags', {
@@ -25204,9 +25204,9 @@
 	  get: __webpack_require__(140)
 	});
 
-/***/ }),
+/***/ },
 /* 140 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 21.2.5.3 get RegExp.prototype.flags
@@ -25222,9 +25222,9 @@
 	  return result;
 	};
 
-/***/ }),
+/***/ },
 /* 141 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// @@match logic
 	__webpack_require__(142)('match', 1, function(defined, MATCH, $match){
@@ -25237,9 +25237,9 @@
 	  }, $match];
 	});
 
-/***/ }),
+/***/ },
 /* 142 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var hide     = __webpack_require__(12)
@@ -25270,9 +25270,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 143 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// @@replace logic
 	__webpack_require__(142)('replace', 2, function(defined, REPLACE, $replace){
@@ -25287,9 +25287,9 @@
 	  }, $replace];
 	});
 
-/***/ }),
+/***/ },
 /* 144 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// @@split logic
 	__webpack_require__(142)('split', 2, function(defined, SPLIT, $split){
@@ -25362,9 +25362,9 @@
 	  }, $split];
 	});
 
-/***/ }),
+/***/ },
 /* 145 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// @@search logic
 	__webpack_require__(142)('search', 1, function(defined, SEARCH, $search){
@@ -25377,9 +25377,9 @@
 	  }, $search];
 	});
 
-/***/ }),
+/***/ },
 /* 146 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var ctx            = __webpack_require__(25)
@@ -25420,9 +25420,9 @@
 	});
 
 
-/***/ }),
+/***/ },
 /* 147 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $defineProperty = __webpack_require__(13)
@@ -25433,9 +25433,9 @@
 	  else object[index] = value;
 	};
 
-/***/ }),
+/***/ },
 /* 148 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var $export        = __webpack_require__(9)
@@ -25457,9 +25457,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 149 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 	var $export = __webpack_require__(9);
@@ -25468,9 +25468,9 @@
 	
 	__webpack_require__(68)('copyWithin');
 
-/***/ }),
+/***/ },
 /* 150 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
@@ -25487,9 +25487,9 @@
 	});
 	__webpack_require__(68)(KEY);
 
-/***/ }),
+/***/ },
 /* 151 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
@@ -25506,9 +25506,9 @@
 	});
 	__webpack_require__(68)(KEY);
 
-/***/ }),
+/***/ },
 /* 152 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 	var $export = __webpack_require__(9);
@@ -25517,9 +25517,9 @@
 	
 	__webpack_require__(68)('fill');
 
-/***/ }),
+/***/ },
 /* 153 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.2 Number.isFinite(number)
 	var $export   = __webpack_require__(9)
@@ -25531,18 +25531,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 154 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Number', {isInteger: __webpack_require__(155)});
 
-/***/ }),
+/***/ },
 /* 155 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
 	var isObject = __webpack_require__(15)
@@ -25551,9 +25551,9 @@
 	  return !isObject(it) && isFinite(it) && floor(it) === it;
 	};
 
-/***/ }),
+/***/ },
 /* 156 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.5 Number.isSafeInteger(number)
 	var $export   = __webpack_require__(9)
@@ -25566,9 +25566,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 157 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.4 Number.isNaN(number)
 	var $export = __webpack_require__(9);
@@ -25579,36 +25579,36 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 158 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.1 Number.EPSILON
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Number', {EPSILON: Math.pow(2, -52)});
 
-/***/ }),
+/***/ },
 /* 159 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.10 Number.MIN_SAFE_INTEGER
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Number', {MIN_SAFE_INTEGER: -0x1fffffffffffff});
 
-/***/ }),
+/***/ },
 /* 160 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.6 Number.MAX_SAFE_INTEGER
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Number', {MAX_SAFE_INTEGER: 0x1fffffffffffff});
 
-/***/ }),
+/***/ },
 /* 161 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.3 Math.acosh(x)
 	var $export = __webpack_require__(9)
@@ -25629,18 +25629,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 162 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 20.2.2.20 Math.log1p(x)
 	module.exports = Math.log1p || function log1p(x){
 	  return (x = +x) > -1e-8 && x < 1e-8 ? x - x * x / 2 : Math.log(1 + x);
 	};
 
-/***/ }),
+/***/ },
 /* 163 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.5 Math.asinh(x)
 	var $export = __webpack_require__(9)
@@ -25653,9 +25653,9 @@
 	// Tor Browser bug: Math.asinh(0) -> -0 
 	$export($export.S + $export.F * !($asinh && 1 / $asinh(0) > 0), 'Math', {asinh: asinh});
 
-/***/ }),
+/***/ },
 /* 164 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.7 Math.atanh(x)
 	var $export = __webpack_require__(9)
@@ -25668,9 +25668,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 165 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.9 Math.cbrt(x)
 	var $export = __webpack_require__(9)
@@ -25682,18 +25682,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 166 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 20.2.2.28 Math.sign(x)
 	module.exports = Math.sign || function sign(x){
 	  return (x = +x) == 0 || x != x ? x : x < 0 ? -1 : 1;
 	};
 
-/***/ }),
+/***/ },
 /* 167 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.11 Math.clz32(x)
 	var $export = __webpack_require__(9);
@@ -25704,9 +25704,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 168 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.12 Math.cosh(x)
 	var $export = __webpack_require__(9)
@@ -25718,9 +25718,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 169 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.14 Math.expm1(x)
 	var $export = __webpack_require__(9)
@@ -25728,9 +25728,9 @@
 	
 	$export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', {expm1: $expm1});
 
-/***/ }),
+/***/ },
 /* 170 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// 20.2.2.14 Math.expm1(x)
 	var $expm1 = Math.expm1;
@@ -25743,9 +25743,9 @@
 	  return (x = +x) == 0 ? x : x > -1e-6 && x < 1e-6 ? x + x * x / 2 : Math.exp(x) - 1;
 	} : $expm1;
 
-/***/ }),
+/***/ },
 /* 171 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.16 Math.fround(x)
 	var $export   = __webpack_require__(9)
@@ -25774,9 +25774,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 172 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
 	var $export = __webpack_require__(9)
@@ -25804,9 +25804,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 173 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.18 Math.imul(x, y)
 	var $export = __webpack_require__(9)
@@ -25826,18 +25826,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 174 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.20 Math.log1p(x)
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Math', {log1p: __webpack_require__(162)});
 
-/***/ }),
+/***/ },
 /* 175 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.21 Math.log10(x)
 	var $export = __webpack_require__(9);
@@ -25848,9 +25848,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 176 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.22 Math.log2(x)
 	var $export = __webpack_require__(9);
@@ -25861,18 +25861,18 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 177 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.28 Math.sign(x)
 	var $export = __webpack_require__(9);
 	
 	$export($export.S, 'Math', {sign: __webpack_require__(166)});
 
-/***/ }),
+/***/ },
 /* 178 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.30 Math.sinh(x)
 	var $export = __webpack_require__(9)
@@ -25890,9 +25890,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 179 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.33 Math.tanh(x)
 	var $export = __webpack_require__(9)
@@ -25907,9 +25907,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 180 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 20.2.2.34 Math.trunc(x)
 	var $export = __webpack_require__(9);
@@ -25920,9 +25920,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 181 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/tc39/Array.prototype.includes
@@ -25937,9 +25937,9 @@
 	
 	__webpack_require__(68)('includes');
 
-/***/ }),
+/***/ },
 /* 182 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-object-values-entries
 	var $export = __webpack_require__(9)
@@ -25951,9 +25951,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 183 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(59)
 	  , toIObject = __webpack_require__(36)
@@ -25972,9 +25972,9 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 184 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-object-values-entries
 	var $export  = __webpack_require__(9)
@@ -25986,9 +25986,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 185 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-object-getownpropertydescriptors
 	var $export        = __webpack_require__(9)
@@ -26010,9 +26010,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 186 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/tc39/proposal-string-pad-start-end
@@ -26025,9 +26025,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 187 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// https://github.com/tc39/proposal-string-pad-start-end
 	var toLength = __webpack_require__(33)
@@ -26047,9 +26047,9 @@
 	};
 
 
-/***/ }),
+/***/ },
 /* 188 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// https://github.com/tc39/proposal-string-pad-start-end
@@ -26062,9 +26062,9 @@
 	  }
 	});
 
-/***/ }),
+/***/ },
 /* 189 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// ie9- setTimeout & setInterval additional parameters fix
 	var global     = __webpack_require__(10)
@@ -26087,9 +26087,9 @@
 	  setInterval: wrap(global.setInterval)
 	});
 
-/***/ }),
+/***/ },
 /* 190 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var path      = __webpack_require__(191)
@@ -26115,15 +26115,15 @@
 	  };
 	};
 
-/***/ }),
+/***/ },
 /* 191 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(10);
 
-/***/ }),
+/***/ },
 /* 192 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(9)
 	  , $task   = __webpack_require__(115);
@@ -26132,9 +26132,9 @@
 	  clearImmediate: $task.clear
 	});
 
-/***/ }),
+/***/ },
 /* 193 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var $iterators    = __webpack_require__(67)
 	  , redefine      = __webpack_require__(22)
@@ -26159,9 +26159,9 @@
 	  }
 	}
 
-/***/ }),
+/***/ },
 /* 194 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/**
 	 * Copyright (c) 2014, Facebook, Inc.
@@ -26181,7 +26181,6 @@
 	  var undefined; // More compressible than void 0.
 	  var $Symbol = typeof Symbol === "function" ? Symbol : {};
 	  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-	  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
 	  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
 	
 	  var inModule = typeof module === "object";
@@ -26395,9 +26394,6 @@
 	  }
 	
 	  defineIteratorMethods(AsyncIterator.prototype);
-	  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-	    return this;
-	  };
 	  runtime.AsyncIterator = AsyncIterator;
 	
 	  // Note that simple async functions are implemented on top of
@@ -26893,9 +26889,9 @@
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(195)))
 
-/***/ }),
+/***/ },
 /* 195 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// shim for using process in browser
 	var process = module.exports = {};
@@ -27067,10 +27063,6 @@
 	process.removeListener = noop;
 	process.removeAllListeners = noop;
 	process.emit = noop;
-	process.prependListener = noop;
-	process.prependOnceListener = noop;
-	
-	process.listeners = function (name) { return [] }
 	
 	process.binding = function (name) {
 	    throw new Error('process.binding is not supported');
@@ -27083,21 +27075,21 @@
 	process.umask = function() { return 0; };
 
 
-/***/ }),
+/***/ },
 /* 196 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"spin":"BmaMLCmaNjd7mY80GifLJ"};
 
-/***/ }),
+/***/ },
 /* 197 */,
 /* 198 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {(function (global, factory) {
-		 true ? module.exports = factory(__webpack_require__(199), __webpack_require__(207)) :
-		typeof define === 'function' && define.amd ? define(['prop-types', 'preact'], factory) :
+		 true ? module.exports = factory(__webpack_require__(199), __webpack_require__(200)) :
+		typeof define === 'function' && define.amd ? define(['proptypes', 'preact'], factory) :
 		(global.preactCompat = factory(global.PropTypes,global.preact));
 	}(this, (function (PropTypes,preact) {
 	
@@ -27178,7 +27170,7 @@
 	
 			if (typeof tag==='function') {
 				if (tag[COMPONENT_WRAPPER_KEY]===true || (tag.prototype && 'isReactComponent' in tag.prototype)) {
-					if (vnode.children && String(vnode.children)==='') { vnode.children = undefined; }
+					if (vnode.children && !vnode.children.length) { vnode.children = undefined; }
 					if (vnode.children) { attrs.children = vnode.children; }
 	
 					if (!vnode.preactCompatNormalized) {
@@ -27188,7 +27180,7 @@
 				}
 			}
 			else {
-				if (vnode.children && String(vnode.children)==='') { vnode.children = undefined; }
+				if (vnode.children && !vnode.children.length) { vnode.children = undefined; }
 				if (vnode.children) { attrs.children = vnode.children; }
 	
 				if (attrs.defaultValue) {
@@ -27308,7 +27300,6 @@
 			return children[0];
 		},
 		toArray: function(children) {
-			if (children == null) { return []; }
 			return Array.isArray && Array.isArray(children) ? children : ARR.concat(children);
 		}
 	};
@@ -27612,6 +27603,8 @@
 	
 	
 	function propsHook(props, context) {
+		var this$1 = this;
+	
 		if (!props) { return; }
 	
 		// React annoyingly special-cases single children, and some react components are ridiculously strict about this.
@@ -27630,10 +27623,14 @@
 		if (DEV) {
 			var ctor = typeof this==='function' ? this : this.constructor,
 				propTypes = this.propTypes || ctor.propTypes;
-			var displayName = this.displayName || ctor.name;
-	
 			if (propTypes) {
-				PropTypes.checkPropTypes(propTypes, props, 'prop', displayName);
+				for (var prop in propTypes) {
+					if (propTypes.hasOwnProperty(prop) && typeof propTypes[prop]==='function') {
+						var displayName = this$1.displayName || ctor.name;
+						var err = propTypes[prop](props, prop, displayName, 'prop');
+						if (err) { console.error(new Error(err.message || err)); }
+					}
+				}
 			}
 		}
 	}
@@ -27723,84 +27720,50 @@
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
 
-/***/ }),
+/***/ },
 /* 199 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+	    factory(exports, module);
+	  } else {
+	    var mod = {
+	      exports: {}
+	    };
+	    factory(mod.exports, mod);
+	    global.PropTypes = mod.exports;
+	  }
+	})(this, function (exports, module) {
 	
-	if (process.env.NODE_ENV !== 'production') {
-	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-	    Symbol.for &&
-	    Symbol.for('react.element')) ||
-	    0xeac7;
+	  'use strict';
 	
-	  var isValidElement = function(object) {
-	    return typeof object === 'object' &&
-	      object !== null &&
-	      object.$$typeof === REACT_ELEMENT_TYPE;
+	  var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
+	
+	  var ReactElement = {};
+	
+	  ReactElement.isValidElement = function (object) {
+	    return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
 	  };
 	
-	  // By explicitly using `prop-types` you are opting into new development behavior.
-	  // http://fb.me/prop-types-in-prod
-	  var throwOnDirectAccess = true;
-	  module.exports = __webpack_require__(200)(isValidElement, throwOnDirectAccess);
-	} else {
-	  // By explicitly using `prop-types` you are opting into new production behavior.
-	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(206)();
-	}
+	  var ReactPropTypeLocationNames = {
+	    prop: 'prop',
+	    context: 'context',
+	    childContext: 'child context'
+	  };
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
-
-/***/ }),
-/* 200 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
+	  var emptyFunction = {
+	    thatReturns: function thatReturns(what) {
+	      return function () {
+	        return what;
+	      };
+	    }
+	  };
 	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(201);
-	var invariant = __webpack_require__(202);
-	var warning = __webpack_require__(203);
-	
-	var ReactPropTypesSecret = __webpack_require__(204);
-	var checkPropTypes = __webpack_require__(205);
-	
-	module.exports = function(isValidElement, throwOnDirectAccess) {
-	  /* global Symbol */
 	  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-	  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-	
-	  /**
-	   * Returns the iterator method function contained on the iterable object.
-	   *
-	   * Be sure to invoke the function with the iterable as context:
-	   *
-	   *     var iteratorFn = getIteratorFn(myIterable);
-	   *     if (iteratorFn) {
-	   *       var iterator = iteratorFn.call(myIterable);
-	   *       ...
-	   *     }
-	   *
-	   * @param {?object} maybeIterable
-	   * @return {?function}
-	   */
+	  var FAUX_ITERATOR_SYMBOL = '@@iterator';
 	  function getIteratorFn(maybeIterable) {
 	    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
 	    if (typeof iteratorFn === 'function') {
@@ -27808,57 +27771,8 @@
 	    }
 	  }
 	
-	  /**
-	   * Collection of methods that allow declaration and validation of props that are
-	   * supplied to React components. Example usage:
-	   *
-	   *   var Props = require('ReactPropTypes');
-	   *   var MyArticle = React.createClass({
-	   *     propTypes: {
-	   *       // An optional string prop named "description".
-	   *       description: Props.string,
-	   *
-	   *       // A required enum prop named "category".
-	   *       category: Props.oneOf(['News','Photos']).isRequired,
-	   *
-	   *       // A prop named "dialog" that requires an instance of Dialog.
-	   *       dialog: Props.instanceOf(Dialog).isRequired
-	   *     },
-	   *     render: function() { ... }
-	   *   });
-	   *
-	   * A more formal specification of how these methods are used:
-	   *
-	   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-	   *   decl := ReactPropTypes.{type}(.isRequired)?
-	   *
-	   * Each and every declaration produces a function with the same signature. This
-	   * allows the creation of custom validation functions. For example:
-	   *
-	   *  var MyLink = React.createClass({
-	   *    propTypes: {
-	   *      // An optional string or URI prop named "href".
-	   *      href: function(props, propName, componentName) {
-	   *        var propValue = props[propName];
-	   *        if (propValue != null && typeof propValue !== 'string' &&
-	   *            !(propValue instanceof URI)) {
-	   *          return new Error(
-	   *            'Expected a string or an URI for ' + propName + ' in ' +
-	   *            componentName
-	   *          );
-	   *        }
-	   *      }
-	   *    },
-	   *    render: function() {...}
-	   *  });
-	   *
-	   * @internal
-	   */
-	
 	  var ANONYMOUS = '<<anonymous>>';
 	
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
 	  var ReactPropTypes = {
 	    array: createPrimitiveTypeChecker('array'),
 	    bool: createPrimitiveTypeChecker('boolean'),
@@ -27879,85 +27793,14 @@
 	    shape: createShapeTypeChecker
 	  };
 	
-	  /**
-	   * inlined Object.is polyfill to avoid requiring consumers ship their own
-	   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-	   */
-	  /*eslint-disable no-self-compare*/
-	  function is(x, y) {
-	    // SameValue algorithm
-	    if (x === y) {
-	      // Steps 1-5, 7-10
-	      // Steps 6.b-6.e: +0 != -0
-	      return x !== 0 || 1 / x === 1 / y;
-	    } else {
-	      // Step 6.a: NaN == NaN
-	      return x !== x && y !== y;
-	    }
-	  }
-	  /*eslint-enable no-self-compare*/
-	
-	  /**
-	   * We use an Error-like object for backward compatibility as people may call
-	   * PropTypes directly and inspect their output. However, we don't use real
-	   * Errors anymore. We don't inspect their stack anyway, and creating them
-	   * is prohibitively expensive if they are created too often, such as what
-	   * happens in oneOfType() for any type before the one that matched.
-	   */
-	  function PropTypeError(message) {
-	    this.message = message;
-	    this.stack = '';
-	  }
-	  // Make `instanceof Error` still work for returned errors.
-	  PropTypeError.prototype = Error.prototype;
-	
 	  function createChainableTypeChecker(validate) {
-	    if (process.env.NODE_ENV !== 'production') {
-	      var manualPropTypeCallCache = {};
-	      var manualPropTypeWarningCount = 0;
-	    }
-	    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+	    function checkType(isRequired, props, propName, componentName, location, propFullName) {
 	      componentName = componentName || ANONYMOUS;
 	      propFullName = propFullName || propName;
-	
-	      if (secret !== ReactPropTypesSecret) {
-	        if (throwOnDirectAccess) {
-	          // New behavior only for users of `prop-types` package
-	          invariant(
-	            false,
-	            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-	            'Use `PropTypes.checkPropTypes()` to call them. ' +
-	            'Read more at http://fb.me/use-check-prop-types'
-	          );
-	        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
-	          // Old behavior for people using React.PropTypes
-	          var cacheKey = componentName + ':' + propName;
-	          if (
-	            !manualPropTypeCallCache[cacheKey] &&
-	            // Avoid spamming the console because they are often not actionable except for lib authors
-	            manualPropTypeWarningCount < 3
-	          ) {
-	            warning(
-	              false,
-	              'You are manually calling a React.PropTypes validation ' +
-	              'function for the `%s` prop on `%s`. This is deprecated ' +
-	              'and will throw in the standalone `prop-types` package. ' +
-	              'You may be seeing this warning due to a third-party PropTypes ' +
-	              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-	              propFullName,
-	              componentName
-	            );
-	            manualPropTypeCallCache[cacheKey] = true;
-	            manualPropTypeWarningCount++;
-	          }
-	        }
-	      }
 	      if (props[propName] == null) {
+	        var locationName = ReactPropTypeLocationNames[location];
 	        if (isRequired) {
-	          if (props[propName] === null) {
-	            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-	          }
-	          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+	          return new Error('Required ' + locationName + ' `' + propFullName + '` was not specified in ' + ('`' + componentName + '`.'));
 	        }
 	        return null;
 	      } else {
@@ -27972,16 +27815,15 @@
 	  }
 	
 	  function createPrimitiveTypeChecker(expectedType) {
-	    function validate(props, propName, componentName, location, propFullName, secret) {
+	    function validate(props, propName, componentName, location, propFullName) {
 	      var propValue = props[propName];
 	      var propType = getPropType(propValue);
 	      if (propType !== expectedType) {
-	        // `propValue` being instance of, say, date/regexp, pass the 'object'
-	        // check, but we can offer a more precise error message here rather than
-	        // 'of type `object`'.
+	        var locationName = ReactPropTypeLocationNames[location];
+	
 	        var preciseType = getPreciseType(propValue);
 	
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
 	      }
 	      return null;
 	    }
@@ -27989,21 +27831,19 @@
 	  }
 	
 	  function createAnyTypeChecker() {
-	    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
+	    return createChainableTypeChecker(emptyFunction.thatReturns(null));
 	  }
 	
 	  function createArrayOfTypeChecker(typeChecker) {
 	    function validate(props, propName, componentName, location, propFullName) {
-	      if (typeof typeChecker !== 'function') {
-	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-	      }
 	      var propValue = props[propName];
 	      if (!Array.isArray(propValue)) {
+	        var locationName = ReactPropTypeLocationNames[location];
 	        var propType = getPropType(propValue);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
 	      }
 	      for (var i = 0; i < propValue.length; i++) {
-	        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+	        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']');
 	        if (error instanceof Error) {
 	          return error;
 	        }
@@ -28015,10 +27855,9 @@
 	
 	  function createElementTypeChecker() {
 	    function validate(props, propName, componentName, location, propFullName) {
-	      var propValue = props[propName];
-	      if (!isValidElement(propValue)) {
-	        var propType = getPropType(propValue);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+	      if (!ReactElement.isValidElement(props[propName])) {
+	        var locationName = ReactPropTypeLocationNames[location];
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a single ReactElement.'));
 	      }
 	      return null;
 	    }
@@ -28028,9 +27867,10 @@
 	  function createInstanceTypeChecker(expectedClass) {
 	    function validate(props, propName, componentName, location, propFullName) {
 	      if (!(props[propName] instanceof expectedClass)) {
+	        var locationName = ReactPropTypeLocationNames[location];
 	        var expectedClassName = expectedClass.name || ANONYMOUS;
 	        var actualClassName = getClassName(props[propName]);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
 	      }
 	      return null;
 	    }
@@ -28039,37 +27879,37 @@
 	
 	  function createEnumTypeChecker(expectedValues) {
 	    if (!Array.isArray(expectedValues)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
+	      return createChainableTypeChecker(function () {
+	        return new Error('Invalid argument supplied to oneOf, expected an instance of array.');
+	      });
 	    }
 	
 	    function validate(props, propName, componentName, location, propFullName) {
 	      var propValue = props[propName];
 	      for (var i = 0; i < expectedValues.length; i++) {
-	        if (is(propValue, expectedValues[i])) {
+	        if (propValue === expectedValues[i]) {
 	          return null;
 	        }
 	      }
 	
+	      var locationName = ReactPropTypeLocationNames[location];
 	      var valuesString = JSON.stringify(expectedValues);
-	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+	      return new Error('Invalid ' + locationName + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
 	    }
 	    return createChainableTypeChecker(validate);
 	  }
 	
 	  function createObjectOfTypeChecker(typeChecker) {
 	    function validate(props, propName, componentName, location, propFullName) {
-	      if (typeof typeChecker !== 'function') {
-	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-	      }
 	      var propValue = props[propName];
 	      var propType = getPropType(propValue);
 	      if (propType !== 'object') {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+	        var locationName = ReactPropTypeLocationNames[location];
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
 	      }
 	      for (var key in propValue) {
 	        if (propValue.hasOwnProperty(key)) {
-	          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+	          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key);
 	          if (error instanceof Error) {
 	            return error;
 	          }
@@ -28082,19 +27922,21 @@
 	
 	  function createUnionTypeChecker(arrayOfTypeCheckers) {
 	    if (!Array.isArray(arrayOfTypeCheckers)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
+	      return createChainableTypeChecker(function () {
+	        return new Error('Invalid argument supplied to oneOfType, expected an instance of array.');
+	      });
 	    }
 	
 	    function validate(props, propName, componentName, location, propFullName) {
 	      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
 	        var checker = arrayOfTypeCheckers[i];
-	        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+	        if (checker(props, propName, componentName, location, propFullName) == null) {
 	          return null;
 	        }
 	      }
 	
-	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+	      var locationName = ReactPropTypeLocationNames[location];
+	      return new Error('Invalid ' + locationName + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
 	    }
 	    return createChainableTypeChecker(validate);
 	  }
@@ -28102,7 +27944,8 @@
 	  function createNodeChecker() {
 	    function validate(props, propName, componentName, location, propFullName) {
 	      if (!isNode(props[propName])) {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+	        var locationName = ReactPropTypeLocationNames[location];
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
 	      }
 	      return null;
 	    }
@@ -28114,14 +27957,15 @@
 	      var propValue = props[propName];
 	      var propType = getPropType(propValue);
 	      if (propType !== 'object') {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+	        var locationName = ReactPropTypeLocationNames[location];
+	        return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
 	      }
 	      for (var key in shapeTypes) {
 	        var checker = shapeTypes[key];
 	        if (!checker) {
 	          continue;
 	        }
-	        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+	        var error = checker(propValue, key, componentName, location, propFullName + '.' + key);
 	        if (error) {
 	          return error;
 	        }
@@ -28143,7 +27987,7 @@
 	        if (Array.isArray(propValue)) {
 	          return propValue.every(isNode);
 	        }
-	        if (propValue === null || isValidElement(propValue)) {
+	        if (propValue === null || ReactElement.isValidElement(propValue)) {
 	          return true;
 	        }
 	
@@ -28158,7 +28002,6 @@
 	              }
 	            }
 	          } else {
-	            // Iterator will provide entry [k,v] tuples rather than values.
 	            while (!(step = iterator.next()).done) {
 	              var entry = step.value;
 	              if (entry) {
@@ -28179,17 +28022,14 @@
 	  }
 	
 	  function isSymbol(propType, propValue) {
-	    // Native Symbol.
 	    if (propType === 'symbol') {
 	      return true;
 	    }
 	
-	    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
 	    if (propValue['@@toStringTag'] === 'Symbol') {
 	      return true;
 	    }
 	
-	    // Fallback for non-spec compliant Symbols which are polyfilled.
 	    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
 	      return true;
 	    }
@@ -28197,16 +28037,12 @@
 	    return false;
 	  }
 	
-	  // Equivalent of `typeof` but with special handling for array and regexp.
 	  function getPropType(propValue) {
 	    var propType = typeof propValue;
 	    if (Array.isArray(propValue)) {
 	      return 'array';
 	    }
 	    if (propValue instanceof RegExp) {
-	      // Old webkits (at least until Android 4.0) return 'function' rather than
-	      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-	      // passes PropTypes.object.
 	      return 'object';
 	    }
 	    if (isSymbol(propType, propValue)) {
@@ -28215,8 +28051,6 @@
 	    return propType;
 	  }
 	
-	  // This handles more types than `getPropType`. Only used for error messages.
-	  // See `createPrimitiveTypeChecker`.
 	  function getPreciseType(propValue) {
 	    var propType = getPropType(propValue);
 	    if (propType === 'object') {
@@ -28229,7 +28063,6 @@
 	    return propType;
 	  }
 	
-	  // Returns class name of the object, if any.
 	  function getClassName(propValue) {
 	    if (!propValue.constructor || !propValue.constructor.name) {
 	      return ANONYMOUS;
@@ -28237,341 +28070,14 @@
 	    return propValue.constructor.name;
 	  }
 	
-	  ReactPropTypes.checkPropTypes = checkPropTypes;
-	  ReactPropTypes.PropTypes = ReactPropTypes;
+	  module.exports = ReactPropTypes;
+	});
 	
-	  return ReactPropTypes;
-	};
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
+	//# sourceMappingURL=index.js.map
 
-/***/ }),
-/* 201 */
-/***/ (function(module, exports) {
-
-	"use strict";
-	
-	/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * 
-	 */
-	
-	function makeEmptyFunction(arg) {
-	  return function () {
-	    return arg;
-	  };
-	}
-	
-	/**
-	 * This function accepts and discards inputs; it has no side effects. This is
-	 * primarily useful idiomatically for overridable function endpoints which
-	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
-	 */
-	var emptyFunction = function emptyFunction() {};
-	
-	emptyFunction.thatReturns = makeEmptyFunction;
-	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-	emptyFunction.thatReturnsThis = function () {
-	  return this;
-	};
-	emptyFunction.thatReturnsArgument = function (arg) {
-	  return arg;
-	};
-	
-	module.exports = emptyFunction;
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-	
-	'use strict';
-	
-	/**
-	 * Use invariant() to assert state which your program assumes to be true.
-	 *
-	 * Provide sprintf-style format (only %s is supported) and arguments
-	 * to provide information about what broke and what you were
-	 * expecting.
-	 *
-	 * The invariant message will be stripped in production, but the invariant
-	 * will remain to ensure logic does not differ in production.
-	 */
-	
-	var validateFormat = function validateFormat(format) {};
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  validateFormat = function validateFormat(format) {
-	    if (format === undefined) {
-	      throw new Error('invariant requires an error message argument');
-	    }
-	  };
-	}
-	
-	function invariant(condition, format, a, b, c, d, e, f) {
-	  validateFormat(format);
-	
-	  if (!condition) {
-	    var error;
-	    if (format === undefined) {
-	      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
-	      error = new Error(format.replace(/%s/g, function () {
-	        return args[argIndex++];
-	      }));
-	      error.name = 'Invariant Violation';
-	    }
-	
-	    error.framesToPop = 1; // we don't care about invariant's own frame
-	    throw error;
-	  }
-	}
-	
-	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(201);
-	
-	/**
-	 * Similar to invariant but only logs a warning if the condition is not met.
-	 * This can be used to log issues in development environments in critical
-	 * paths. Removing the logging code for production environments will keep the
-	 * same logic and follow the same code paths.
-	 */
-	
-	var warning = emptyFunction;
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  (function () {
-	    var printWarning = function printWarning(format) {
-	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	        args[_key - 1] = arguments[_key];
-	      }
-	
-	      var argIndex = 0;
-	      var message = 'Warning: ' + format.replace(/%s/g, function () {
-	        return args[argIndex++];
-	      });
-	      if (typeof console !== 'undefined') {
-	        console.error(message);
-	      }
-	      try {
-	        // --- Welcome to debugging React ---
-	        // This error was thrown as a convenience so that you can use this stack
-	        // to find the callsite that caused this warning to fire.
-	        throw new Error(message);
-	      } catch (x) {}
-	    };
-	
-	    warning = function warning(condition, format) {
-	      if (format === undefined) {
-	        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-	      }
-	
-	      if (format.indexOf('Failed Composite propType: ') === 0) {
-	        return; // Ignore CompositeComponent proptype check.
-	      }
-	
-	      if (!condition) {
-	        for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-	          args[_key2 - 2] = arguments[_key2];
-	        }
-	
-	        printWarning.apply(undefined, [format].concat(args));
-	      }
-	    };
-	  })();
-	}
-	
-	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-	
-	module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var invariant = __webpack_require__(202);
-	  var warning = __webpack_require__(203);
-	  var ReactPropTypesSecret = __webpack_require__(204);
-	  var loggedTypeFailures = {};
-	}
-	
-	/**
-	 * Assert that the values match with the type specs.
-	 * Error messages are memorized and will only be shown once.
-	 *
-	 * @param {object} typeSpecs Map of name to a ReactPropType
-	 * @param {object} values Runtime values that need to be type-checked
-	 * @param {string} location e.g. "prop", "context", "child context"
-	 * @param {string} componentName Name of the component for error messages.
-	 * @param {?Function} getStack Returns the component stack.
-	 * @private
-	 */
-	function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-	  if (process.env.NODE_ENV !== 'production') {
-	    for (var typeSpecName in typeSpecs) {
-	      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-	        var error;
-	        // Prop type validation may throw. In case they do, we don't want to
-	        // fail the render phase where it didn't fail before. So we log it.
-	        // After these have been cleaned up, we'll let them throw.
-	        try {
-	          // This is intentionally an invariant that gets caught. It's the same
-	          // behavior as without this statement except with a better message.
-	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
-	          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-	        } catch (ex) {
-	          error = ex;
-	        }
-	        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
-	        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-	          // Only monitor this failure once because there tends to be a lot of the
-	          // same error.
-	          loggedTypeFailures[error.message] = true;
-	
-	          var stack = getStack ? getStack() : '';
-	
-	          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-	        }
-	      }
-	    }
-	  }
-	}
-	
-	module.exports = checkPropTypes;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
-
-/***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(201);
-	var invariant = __webpack_require__(202);
-	
-	module.exports = function() {
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-	  function shim() {
-	    invariant(
-	      false,
-	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-	      'Use PropTypes.checkPropTypes() to call them. ' +
-	      'Read more at http://fb.me/use-check-prop-types'
-	    );
-	  };
-	  shim.isRequired = shim;
-	  function getShim() {
-	    return shim;
-	  };
-	  var ReactPropTypes = {
-	    array: shim,
-	    bool: shim,
-	    func: shim,
-	    number: shim,
-	    object: shim,
-	    string: shim,
-	    symbol: shim,
-	
-	    any: shim,
-	    arrayOf: getShim,
-	    element: shim,
-	    instanceOf: getShim,
-	    node: shim,
-	    objectOf: getShim,
-	    oneOf: getShim,
-	    oneOfType: getShim,
-	    shape: getShim
-	  };
-	
-	  ReactPropTypes.checkPropTypes = emptyFunction;
-	  ReactPropTypes.PropTypes = ReactPropTypes;
-	
-	  return ReactPropTypes;
-	};
-
-
-/***/ }),
-/* 207 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 200 */
+/***/ function(module, exports, __webpack_require__) {
 
 	!function(global, factory) {
 	     true ? factory(exports) : 'function' == typeof define && define.amd ? define([ 'exports' ], factory) : factory(global.preact = global.preact || {});
@@ -29060,9 +28566,9 @@
 	});
 	//# sourceMappingURL=preact.js.map
 
-/***/ }),
-/* 208 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 201 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * preact plugin that provides Polyglot and date-fns helpers using a Higher Order Component.
@@ -29084,15 +28590,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _nodePolyglot = __webpack_require__(209);
+	var _nodePolyglot = __webpack_require__(202);
 	
 	var _nodePolyglot2 = _interopRequireDefault(_nodePolyglot);
 	
-	var _format = __webpack_require__(232);
+	var _format = __webpack_require__(225);
 	
 	var _format2 = _interopRequireDefault(_format);
 	
-	var _en = __webpack_require__(249);
+	var _en = __webpack_require__(242);
 	
 	var _en2 = _interopRequireDefault(_en);
 	
@@ -29113,7 +28619,7 @@
 	  // Load global locales
 	  if (lang && lang !== 'en') {
 	    try {
-	      var dict = __webpack_require__(250)("./" + lang);
+	      var dict = __webpack_require__(243)("./" + lang);
 	      polyglot.extend(dict);
 	      polyglot.locale(lang);
 	    } catch (e) {
@@ -29132,11 +28638,11 @@
 	
 	var initFormat = function initFormat(lang) {
 	  var locales = {
-	    en: __webpack_require__(245)
+	    en: __webpack_require__(238)
 	  };
 	  if (lang && lang !== 'en') {
 	    try {
-	      locales[lang] = __webpack_require__(251)("./" + lang);
+	      locales[lang] = __webpack_require__(244)("./" + lang);
 	    } catch (e) {
 	      console.warn('The "' + lang + '" locale isn\'t supported by date-fns');
 	    }
@@ -29202,9 +28708,9 @@
 	  };
 	};
 
-/***/ }),
-/* 209 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 202 */
+/***/ function(module, exports, __webpack_require__) {
 
 	//     (c) 2012-2016 Airbnb, Inc.
 	//
@@ -29225,10 +28731,10 @@
 	
 	'use strict';
 	
-	var forEach = __webpack_require__(210);
-	var warning = __webpack_require__(212);
-	var has = __webpack_require__(213);
-	var trim = __webpack_require__(216);
+	var forEach = __webpack_require__(203);
+	var warning = __webpack_require__(205);
+	var has = __webpack_require__(206);
+	var trim = __webpack_require__(209);
 	
 	var warn = function warn(message) {
 	  warning(false, message);
@@ -29543,11 +29049,11 @@
 	module.exports = Polyglot;
 
 
-/***/ }),
-/* 210 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var isFunction = __webpack_require__(211)
+	var isFunction = __webpack_require__(204)
 	
 	module.exports = forEach
 	
@@ -29595,9 +29101,9 @@
 	}
 
 
-/***/ }),
-/* 211 */
-/***/ (function(module, exports) {
+/***/ },
+/* 204 */
+/***/ function(module, exports) {
 
 	module.exports = isFunction
 	
@@ -29616,9 +29122,9 @@
 	};
 
 
-/***/ }),
-/* 212 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2014-2015, Facebook, Inc.
@@ -29683,27 +29189,27 @@
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)))
 
-/***/ }),
-/* 213 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 206 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var bind = __webpack_require__(214);
+	var bind = __webpack_require__(207);
 	
 	module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
 
-/***/ }),
-/* 214 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 207 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var implementation = __webpack_require__(215);
+	var implementation = __webpack_require__(208);
 	
 	module.exports = Function.prototype.bind || implementation;
 
 
-/***/ }),
-/* 215 */
-/***/ (function(module, exports) {
+/***/ },
+/* 208 */
+/***/ function(module, exports) {
 
 	var ERROR_MESSAGE = 'Function.prototype.bind called on incompatible ';
 	var slice = Array.prototype.slice;
@@ -29755,18 +29261,18 @@
 	};
 
 
-/***/ }),
-/* 216 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var bind = __webpack_require__(214);
-	var define = __webpack_require__(217);
+	var bind = __webpack_require__(207);
+	var define = __webpack_require__(210);
 	
-	var implementation = __webpack_require__(221);
-	var getPolyfill = __webpack_require__(230);
-	var shim = __webpack_require__(231);
+	var implementation = __webpack_require__(214);
+	var getPolyfill = __webpack_require__(223);
+	var shim = __webpack_require__(224);
 	
 	var boundTrim = bind.call(Function.call, getPolyfill());
 	
@@ -29779,14 +29285,14 @@
 	module.exports = boundTrim;
 
 
-/***/ }),
-/* 217 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 210 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var keys = __webpack_require__(218);
-	var foreach = __webpack_require__(220);
+	var keys = __webpack_require__(211);
+	var foreach = __webpack_require__(213);
 	var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
 	
 	var toStr = Object.prototype.toString;
@@ -29841,9 +29347,9 @@
 	module.exports = defineProperties;
 
 
-/***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 211 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -29851,7 +29357,7 @@
 	var has = Object.prototype.hasOwnProperty;
 	var toStr = Object.prototype.toString;
 	var slice = Array.prototype.slice;
-	var isArgs = __webpack_require__(219);
+	var isArgs = __webpack_require__(212);
 	var isEnumerable = Object.prototype.propertyIsEnumerable;
 	var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
 	var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
@@ -29987,9 +29493,9 @@
 	module.exports = keysShim;
 
 
-/***/ }),
-/* 219 */
-/***/ (function(module, exports) {
+/***/ },
+/* 212 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
@@ -30010,9 +29516,9 @@
 	};
 
 
-/***/ }),
-/* 220 */
-/***/ (function(module, exports) {
+/***/ },
+/* 213 */
+/***/ function(module, exports) {
 
 	
 	var hasOwn = Object.prototype.hasOwnProperty;
@@ -30038,14 +29544,14 @@
 	
 
 
-/***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 214 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var bind = __webpack_require__(214);
-	var ES = __webpack_require__(222);
+	var bind = __webpack_require__(207);
+	var ES = __webpack_require__(215);
 	var replace = bind.call(Function.call, String.prototype.replace);
 	
 	var leftWhitespace = /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
@@ -30057,20 +29563,20 @@
 	};
 
 
-/***/ }),
-/* 222 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var $isNaN = __webpack_require__(223);
-	var $isFinite = __webpack_require__(224);
+	var $isNaN = __webpack_require__(216);
+	var $isFinite = __webpack_require__(217);
 	
-	var sign = __webpack_require__(225);
-	var mod = __webpack_require__(226);
+	var sign = __webpack_require__(218);
+	var mod = __webpack_require__(219);
 	
-	var IsCallable = __webpack_require__(227);
-	var toPrimitive = __webpack_require__(228);
+	var IsCallable = __webpack_require__(220);
+	var toPrimitive = __webpack_require__(221);
 	
 	// https://es5.github.io/#x9
 	var ES5 = {
@@ -30149,36 +29655,36 @@
 	module.exports = ES5;
 
 
-/***/ }),
-/* 223 */
-/***/ (function(module, exports) {
+/***/ },
+/* 216 */
+/***/ function(module, exports) {
 
 	module.exports = Number.isNaN || function isNaN(a) {
 		return a !== a;
 	};
 
 
-/***/ }),
-/* 224 */
-/***/ (function(module, exports) {
+/***/ },
+/* 217 */
+/***/ function(module, exports) {
 
 	var $isNaN = Number.isNaN || function (a) { return a !== a; };
 	
 	module.exports = Number.isFinite || function (x) { return typeof x === 'number' && !$isNaN(x) && x !== Infinity && x !== -Infinity; };
 
 
-/***/ }),
-/* 225 */
-/***/ (function(module, exports) {
+/***/ },
+/* 218 */
+/***/ function(module, exports) {
 
 	module.exports = function sign(number) {
 		return number >= 0 ? 1 : -1;
 	};
 
 
-/***/ }),
-/* 226 */
-/***/ (function(module, exports) {
+/***/ },
+/* 219 */
+/***/ function(module, exports) {
 
 	module.exports = function mod(number, modulo) {
 		var remain = number % modulo;
@@ -30186,9 +29692,9 @@
 	};
 
 
-/***/ }),
-/* 227 */
-/***/ (function(module, exports) {
+/***/ },
+/* 220 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
@@ -30231,17 +29737,17 @@
 	};
 
 
-/***/ }),
-/* 228 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var toStr = Object.prototype.toString;
 	
-	var isPrimitive = __webpack_require__(229);
+	var isPrimitive = __webpack_require__(222);
 	
-	var isCallable = __webpack_require__(227);
+	var isCallable = __webpack_require__(220);
 	
 	// https://es5.github.io/#x8.12
 	var ES5internalSlots = {
@@ -30274,22 +29780,22 @@
 	};
 
 
-/***/ }),
-/* 229 */
-/***/ (function(module, exports) {
+/***/ },
+/* 222 */
+/***/ function(module, exports) {
 
 	module.exports = function isPrimitive(value) {
 		return value === null || (typeof value !== 'function' && typeof value !== 'object');
 	};
 
 
-/***/ }),
-/* 230 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var implementation = __webpack_require__(221);
+	var implementation = __webpack_require__(214);
 	
 	var zeroWidthSpace = '\u200b';
 	
@@ -30301,14 +29807,14 @@
 	};
 
 
-/***/ }),
-/* 231 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var define = __webpack_require__(217);
-	var getPolyfill = __webpack_require__(230);
+	var define = __webpack_require__(210);
+	var getPolyfill = __webpack_require__(223);
 	
 	module.exports = function shimStringTrim() {
 		var polyfill = getPolyfill();
@@ -30317,16 +29823,16 @@
 	};
 
 
-/***/ }),
-/* 232 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var getDayOfYear = __webpack_require__(233)
-	var getISOWeek = __webpack_require__(239)
-	var getISOYear = __webpack_require__(243)
-	var parse = __webpack_require__(234)
-	var isValid = __webpack_require__(244)
-	var enLocale = __webpack_require__(245)
+	var getDayOfYear = __webpack_require__(226)
+	var getISOWeek = __webpack_require__(232)
+	var getISOYear = __webpack_require__(236)
+	var parse = __webpack_require__(227)
+	var isValid = __webpack_require__(237)
+	var enLocale = __webpack_require__(238)
 	
 	/**
 	 * @category Common Helpers
@@ -30651,13 +30157,13 @@
 	module.exports = format
 
 
-/***/ }),
-/* 233 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
-	var startOfYear = __webpack_require__(236)
-	var differenceInCalendarDays = __webpack_require__(237)
+	var parse = __webpack_require__(227)
+	var startOfYear = __webpack_require__(229)
+	var differenceInCalendarDays = __webpack_require__(230)
 	
 	/**
 	 * @category Day Helpers
@@ -30684,11 +30190,11 @@
 	module.exports = getDayOfYear
 
 
-/***/ }),
-/* 234 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var isDate = __webpack_require__(235)
+	var isDate = __webpack_require__(228)
 	
 	var MILLISECONDS_IN_HOUR = 3600000
 	var MILLISECONDS_IN_MINUTE = 60000
@@ -31010,9 +30516,9 @@
 	module.exports = parse
 
 
-/***/ }),
-/* 235 */
-/***/ (function(module, exports) {
+/***/ },
+/* 228 */
+/***/ function(module, exports) {
 
 	/**
 	 * @category Common Helpers
@@ -31036,11 +30542,11 @@
 	module.exports = isDate
 
 
-/***/ }),
-/* 236 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
+	var parse = __webpack_require__(227)
 	
 	/**
 	 * @category Year Helpers
@@ -31069,11 +30575,11 @@
 	module.exports = startOfYear
 
 
-/***/ }),
-/* 237 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var startOfDay = __webpack_require__(238)
+	var startOfDay = __webpack_require__(231)
 	
 	var MILLISECONDS_IN_MINUTE = 60000
 	var MILLISECONDS_IN_DAY = 86400000
@@ -31116,11 +30622,11 @@
 	module.exports = differenceInCalendarDays
 
 
-/***/ }),
-/* 238 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
+	var parse = __webpack_require__(227)
 	
 	/**
 	 * @category Day Helpers
@@ -31147,13 +30653,13 @@
 	module.exports = startOfDay
 
 
-/***/ }),
-/* 239 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
-	var startOfISOWeek = __webpack_require__(240)
-	var startOfISOYear = __webpack_require__(242)
+	var parse = __webpack_require__(227)
+	var startOfISOWeek = __webpack_require__(233)
+	var startOfISOYear = __webpack_require__(235)
 	
 	var MILLISECONDS_IN_WEEK = 604800000
 	
@@ -31187,11 +30693,11 @@
 	module.exports = getISOWeek
 
 
-/***/ }),
-/* 240 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var startOfWeek = __webpack_require__(241)
+	var startOfWeek = __webpack_require__(234)
 	
 	/**
 	 * @category ISO Week Helpers
@@ -31218,11 +30724,11 @@
 	module.exports = startOfISOWeek
 
 
-/***/ }),
-/* 241 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
+	var parse = __webpack_require__(227)
 	
 	/**
 	 * @category Week Helpers
@@ -31262,12 +30768,12 @@
 	module.exports = startOfWeek
 
 
-/***/ }),
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var getISOYear = __webpack_require__(243)
-	var startOfISOWeek = __webpack_require__(240)
+	var getISOYear = __webpack_require__(236)
+	var startOfISOWeek = __webpack_require__(233)
 	
 	/**
 	 * @category ISO Week-Numbering Year Helpers
@@ -31300,12 +30806,12 @@
 	module.exports = startOfISOYear
 
 
-/***/ }),
-/* 243 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var parse = __webpack_require__(234)
-	var startOfISOWeek = __webpack_require__(240)
+	var parse = __webpack_require__(227)
+	var startOfISOWeek = __webpack_require__(233)
 	
 	/**
 	 * @category ISO Week-Numbering Year Helpers
@@ -31351,11 +30857,11 @@
 	module.exports = getISOYear
 
 
-/***/ }),
-/* 244 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var isDate = __webpack_require__(235)
+	var isDate = __webpack_require__(228)
 	
 	/**
 	 * @category Common Helpers
@@ -31392,12 +30898,12 @@
 	module.exports = isValid
 
 
-/***/ }),
-/* 245 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(246)
-	var buildFormatLocale = __webpack_require__(247)
+	var buildDistanceInWordsLocale = __webpack_require__(239)
+	var buildFormatLocale = __webpack_require__(240)
 	
 	/**
 	 * @category Locales
@@ -31409,9 +30915,9 @@
 	}
 
 
-/***/ }),
-/* 246 */
-/***/ (function(module, exports) {
+/***/ },
+/* 239 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -31514,11 +31020,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 247 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // Note: in English, the names of days of the week and months are capitalized.
@@ -31608,9 +31114,9 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 248 */
-/***/ (function(module, exports) {
+/***/ },
+/* 241 */
+/***/ function(module, exports) {
 
 	var commonFormatterKeys = [
 	  'M', 'MM', 'Q', 'D', 'DD', 'DDD', 'DDDD', 'd',
@@ -31642,9 +31148,9 @@
 	module.exports = buildFormattingTokensRegExp
 
 
-/***/ }),
-/* 249 */
-/***/ (function(module, exports) {
+/***/ },
+/* 242 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"App": {
@@ -31652,13 +31158,13 @@
 		}
 	};
 
-/***/ }),
-/* 250 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./en": 249,
-		"./en.json": 249
+		"./en": 242,
+		"./en.json": 242
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -31671,276 +31177,276 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 250;
+	webpackContext.id = 243;
 
 
-/***/ }),
-/* 251 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./_lib/build_formatting_tokens_reg_exp/index": 248,
-		"./_lib/build_formatting_tokens_reg_exp/index.js": 248,
-		"./_lib/package": 252,
-		"./_lib/package.json": 252,
-		"./ar/build_distance_in_words_locale/index": 253,
-		"./ar/build_distance_in_words_locale/index.js": 253,
-		"./ar/build_format_locale/index": 254,
-		"./ar/build_format_locale/index.js": 254,
-		"./ar/index": 255,
-		"./ar/index.js": 255,
-		"./ar/package": 256,
-		"./ar/package.json": 256,
-		"./bg/build_distance_in_words_locale/index": 257,
-		"./bg/build_distance_in_words_locale/index.js": 257,
-		"./bg/build_format_locale/index": 258,
-		"./bg/build_format_locale/index.js": 258,
-		"./bg/index": 259,
-		"./bg/index.js": 259,
-		"./bg/package": 260,
-		"./bg/package.json": 260,
-		"./ca/build_distance_in_words_locale/index": 261,
-		"./ca/build_distance_in_words_locale/index.js": 261,
-		"./ca/build_format_locale/index": 262,
-		"./ca/build_format_locale/index.js": 262,
-		"./ca/index": 263,
-		"./ca/index.js": 263,
-		"./ca/package": 264,
-		"./ca/package.json": 264,
-		"./cs/build_distance_in_words_locale/index": 265,
-		"./cs/build_distance_in_words_locale/index.js": 265,
-		"./cs/build_format_locale/index": 266,
-		"./cs/build_format_locale/index.js": 266,
-		"./cs/index": 267,
-		"./cs/index.js": 267,
-		"./cs/package": 268,
-		"./cs/package.json": 268,
-		"./da/build_distance_in_words_locale/index": 269,
-		"./da/build_distance_in_words_locale/index.js": 269,
-		"./da/build_format_locale/index": 270,
-		"./da/build_format_locale/index.js": 270,
-		"./da/index": 271,
-		"./da/index.js": 271,
-		"./da/package": 272,
-		"./da/package.json": 272,
-		"./de/build_distance_in_words_locale/index": 273,
-		"./de/build_distance_in_words_locale/index.js": 273,
-		"./de/build_format_locale/index": 274,
-		"./de/build_format_locale/index.js": 274,
-		"./de/index": 275,
-		"./de/index.js": 275,
-		"./de/package": 276,
-		"./de/package.json": 276,
-		"./el/build_distance_in_words_locale/index": 277,
-		"./el/build_distance_in_words_locale/index.js": 277,
-		"./el/build_format_locale/index": 278,
-		"./el/build_format_locale/index.js": 278,
-		"./el/index": 279,
-		"./el/index.js": 279,
-		"./el/package": 280,
-		"./el/package.json": 280,
-		"./en/build_distance_in_words_locale/index": 246,
-		"./en/build_distance_in_words_locale/index.js": 246,
-		"./en/build_format_locale/index": 247,
-		"./en/build_format_locale/index.js": 247,
-		"./en/index": 245,
-		"./en/index.js": 245,
-		"./en/package": 281,
-		"./en/package.json": 281,
-		"./eo/build_distance_in_words_locale/index": 282,
-		"./eo/build_distance_in_words_locale/index.js": 282,
-		"./eo/build_format_locale/index": 283,
-		"./eo/build_format_locale/index.js": 283,
-		"./eo/index": 284,
-		"./eo/index.js": 284,
-		"./eo/package": 285,
-		"./eo/package.json": 285,
-		"./es/build_distance_in_words_locale/index": 286,
-		"./es/build_distance_in_words_locale/index.js": 286,
-		"./es/build_format_locale/index": 287,
-		"./es/build_format_locale/index.js": 287,
-		"./es/index": 288,
-		"./es/index.js": 288,
-		"./es/package": 289,
-		"./es/package.json": 289,
-		"./fi/build_distance_in_words_locale/index": 290,
-		"./fi/build_distance_in_words_locale/index.js": 290,
-		"./fi/build_format_locale/index": 291,
-		"./fi/build_format_locale/index.js": 291,
-		"./fi/index": 292,
-		"./fi/index.js": 292,
-		"./fi/package": 293,
-		"./fi/package.json": 293,
-		"./fil/build_distance_in_words_locale/index": 294,
-		"./fil/build_distance_in_words_locale/index.js": 294,
-		"./fil/build_format_locale/index": 295,
-		"./fil/build_format_locale/index.js": 295,
-		"./fil/index": 296,
-		"./fil/index.js": 296,
-		"./fil/package": 297,
-		"./fil/package.json": 297,
-		"./fr/build_distance_in_words_locale/index": 298,
-		"./fr/build_distance_in_words_locale/index.js": 298,
-		"./fr/build_format_locale/index": 299,
-		"./fr/build_format_locale/index.js": 299,
-		"./fr/index": 300,
-		"./fr/index.js": 300,
-		"./fr/package": 301,
-		"./fr/package.json": 301,
-		"./hr/build_distance_in_words_locale/index": 302,
-		"./hr/build_distance_in_words_locale/index.js": 302,
-		"./hr/build_format_locale/index": 303,
-		"./hr/build_format_locale/index.js": 303,
-		"./hr/index": 304,
-		"./hr/index.js": 304,
-		"./hr/package": 305,
-		"./hr/package.json": 305,
-		"./id/build_distance_in_words_locale/index": 306,
-		"./id/build_distance_in_words_locale/index.js": 306,
-		"./id/build_format_locale/index": 307,
-		"./id/build_format_locale/index.js": 307,
-		"./id/index": 308,
-		"./id/index.js": 308,
-		"./id/package": 309,
-		"./id/package.json": 309,
-		"./is/build_distance_in_words_locale/index": 310,
-		"./is/build_distance_in_words_locale/index.js": 310,
-		"./is/build_format_locale/index": 311,
-		"./is/build_format_locale/index.js": 311,
-		"./is/index": 312,
-		"./is/index.js": 312,
-		"./is/package": 313,
-		"./is/package.json": 313,
-		"./it/build_distance_in_words_locale/index": 314,
-		"./it/build_distance_in_words_locale/index.js": 314,
-		"./it/build_format_locale/index": 315,
-		"./it/build_format_locale/index.js": 315,
-		"./it/index": 316,
-		"./it/index.js": 316,
-		"./it/package": 317,
-		"./it/package.json": 317,
-		"./ja/build_distance_in_words_locale/index": 318,
-		"./ja/build_distance_in_words_locale/index.js": 318,
-		"./ja/build_format_locale/index": 319,
-		"./ja/build_format_locale/index.js": 319,
-		"./ja/index": 320,
-		"./ja/index.js": 320,
-		"./ja/package": 321,
-		"./ja/package.json": 321,
-		"./ko/build_distance_in_words_locale/index": 322,
-		"./ko/build_distance_in_words_locale/index.js": 322,
-		"./ko/build_format_locale/index": 323,
-		"./ko/build_format_locale/index.js": 323,
-		"./ko/index": 324,
-		"./ko/index.js": 324,
-		"./ko/package": 325,
-		"./ko/package.json": 325,
-		"./mk/build_distance_in_words_locale/index": 326,
-		"./mk/build_distance_in_words_locale/index.js": 326,
-		"./mk/build_format_locale/index": 327,
-		"./mk/build_format_locale/index.js": 327,
-		"./mk/index": 328,
-		"./mk/index.js": 328,
-		"./mk/package": 329,
-		"./mk/package.json": 329,
-		"./nb/build_distance_in_words_locale/index": 330,
-		"./nb/build_distance_in_words_locale/index.js": 330,
-		"./nb/build_format_locale/index": 331,
-		"./nb/build_format_locale/index.js": 331,
-		"./nb/index": 332,
-		"./nb/index.js": 332,
-		"./nb/package": 333,
-		"./nb/package.json": 333,
-		"./nl/build_distance_in_words_locale/index": 334,
-		"./nl/build_distance_in_words_locale/index.js": 334,
-		"./nl/build_format_locale/index": 335,
-		"./nl/build_format_locale/index.js": 335,
-		"./nl/index": 336,
-		"./nl/index.js": 336,
-		"./nl/package": 337,
-		"./nl/package.json": 337,
-		"./package": 338,
-		"./package.json": 338,
-		"./pl/build_distance_in_words_locale/index": 339,
-		"./pl/build_distance_in_words_locale/index.js": 339,
-		"./pl/build_format_locale/index": 340,
-		"./pl/build_format_locale/index.js": 340,
-		"./pl/index": 341,
-		"./pl/index.js": 341,
-		"./pl/package": 342,
-		"./pl/package.json": 342,
-		"./pt/build_distance_in_words_locale/index": 343,
-		"./pt/build_distance_in_words_locale/index.js": 343,
-		"./pt/build_format_locale/index": 344,
-		"./pt/build_format_locale/index.js": 344,
-		"./pt/index": 345,
-		"./pt/index.js": 345,
-		"./pt/package": 346,
-		"./pt/package.json": 346,
-		"./ro/build_distance_in_words_locale/index": 347,
-		"./ro/build_distance_in_words_locale/index.js": 347,
-		"./ro/build_format_locale/index": 348,
-		"./ro/build_format_locale/index.js": 348,
-		"./ro/index": 349,
-		"./ro/index.js": 349,
-		"./ro/package": 350,
-		"./ro/package.json": 350,
-		"./ru/build_distance_in_words_locale/index": 351,
-		"./ru/build_distance_in_words_locale/index.js": 351,
-		"./ru/build_format_locale/index": 352,
-		"./ru/build_format_locale/index.js": 352,
-		"./ru/index": 353,
-		"./ru/index.js": 353,
-		"./ru/package": 354,
-		"./ru/package.json": 354,
-		"./sk/build_distance_in_words_locale/index": 355,
-		"./sk/build_distance_in_words_locale/index.js": 355,
-		"./sk/build_format_locale/index": 356,
-		"./sk/build_format_locale/index.js": 356,
-		"./sk/index": 357,
-		"./sk/index.js": 357,
-		"./sk/package": 358,
-		"./sk/package.json": 358,
-		"./sv/build_distance_in_words_locale/index": 359,
-		"./sv/build_distance_in_words_locale/index.js": 359,
-		"./sv/build_format_locale/index": 360,
-		"./sv/build_format_locale/index.js": 360,
-		"./sv/index": 361,
-		"./sv/index.js": 361,
-		"./sv/package": 362,
-		"./sv/package.json": 362,
-		"./th/build_distance_in_words_locale/index": 363,
-		"./th/build_distance_in_words_locale/index.js": 363,
-		"./th/build_format_locale/index": 364,
-		"./th/build_format_locale/index.js": 364,
-		"./th/index": 365,
-		"./th/index.js": 365,
-		"./th/package": 366,
-		"./th/package.json": 366,
-		"./tr/build_distance_in_words_locale/index": 367,
-		"./tr/build_distance_in_words_locale/index.js": 367,
-		"./tr/build_format_locale/index": 368,
-		"./tr/build_format_locale/index.js": 368,
-		"./tr/index": 369,
-		"./tr/index.js": 369,
-		"./tr/package": 370,
-		"./tr/package.json": 370,
-		"./zh_cn/build_distance_in_words_locale/index": 371,
-		"./zh_cn/build_distance_in_words_locale/index.js": 371,
-		"./zh_cn/build_format_locale/index": 372,
-		"./zh_cn/build_format_locale/index.js": 372,
-		"./zh_cn/index": 373,
-		"./zh_cn/index.js": 373,
-		"./zh_cn/package": 374,
-		"./zh_cn/package.json": 374,
-		"./zh_tw/build_distance_in_words_locale/index": 375,
-		"./zh_tw/build_distance_in_words_locale/index.js": 375,
-		"./zh_tw/build_format_locale/index": 376,
-		"./zh_tw/build_format_locale/index.js": 376,
-		"./zh_tw/index": 377,
-		"./zh_tw/index.js": 377,
-		"./zh_tw/package": 378,
-		"./zh_tw/package.json": 378
+		"./_lib/build_formatting_tokens_reg_exp/index": 241,
+		"./_lib/build_formatting_tokens_reg_exp/index.js": 241,
+		"./_lib/package": 245,
+		"./_lib/package.json": 245,
+		"./ar/build_distance_in_words_locale/index": 246,
+		"./ar/build_distance_in_words_locale/index.js": 246,
+		"./ar/build_format_locale/index": 247,
+		"./ar/build_format_locale/index.js": 247,
+		"./ar/index": 248,
+		"./ar/index.js": 248,
+		"./ar/package": 249,
+		"./ar/package.json": 249,
+		"./bg/build_distance_in_words_locale/index": 250,
+		"./bg/build_distance_in_words_locale/index.js": 250,
+		"./bg/build_format_locale/index": 251,
+		"./bg/build_format_locale/index.js": 251,
+		"./bg/index": 252,
+		"./bg/index.js": 252,
+		"./bg/package": 253,
+		"./bg/package.json": 253,
+		"./ca/build_distance_in_words_locale/index": 254,
+		"./ca/build_distance_in_words_locale/index.js": 254,
+		"./ca/build_format_locale/index": 255,
+		"./ca/build_format_locale/index.js": 255,
+		"./ca/index": 256,
+		"./ca/index.js": 256,
+		"./ca/package": 257,
+		"./ca/package.json": 257,
+		"./cs/build_distance_in_words_locale/index": 258,
+		"./cs/build_distance_in_words_locale/index.js": 258,
+		"./cs/build_format_locale/index": 259,
+		"./cs/build_format_locale/index.js": 259,
+		"./cs/index": 260,
+		"./cs/index.js": 260,
+		"./cs/package": 261,
+		"./cs/package.json": 261,
+		"./da/build_distance_in_words_locale/index": 262,
+		"./da/build_distance_in_words_locale/index.js": 262,
+		"./da/build_format_locale/index": 263,
+		"./da/build_format_locale/index.js": 263,
+		"./da/index": 264,
+		"./da/index.js": 264,
+		"./da/package": 265,
+		"./da/package.json": 265,
+		"./de/build_distance_in_words_locale/index": 266,
+		"./de/build_distance_in_words_locale/index.js": 266,
+		"./de/build_format_locale/index": 267,
+		"./de/build_format_locale/index.js": 267,
+		"./de/index": 268,
+		"./de/index.js": 268,
+		"./de/package": 269,
+		"./de/package.json": 269,
+		"./el/build_distance_in_words_locale/index": 270,
+		"./el/build_distance_in_words_locale/index.js": 270,
+		"./el/build_format_locale/index": 271,
+		"./el/build_format_locale/index.js": 271,
+		"./el/index": 272,
+		"./el/index.js": 272,
+		"./el/package": 273,
+		"./el/package.json": 273,
+		"./en/build_distance_in_words_locale/index": 239,
+		"./en/build_distance_in_words_locale/index.js": 239,
+		"./en/build_format_locale/index": 240,
+		"./en/build_format_locale/index.js": 240,
+		"./en/index": 238,
+		"./en/index.js": 238,
+		"./en/package": 274,
+		"./en/package.json": 274,
+		"./eo/build_distance_in_words_locale/index": 275,
+		"./eo/build_distance_in_words_locale/index.js": 275,
+		"./eo/build_format_locale/index": 276,
+		"./eo/build_format_locale/index.js": 276,
+		"./eo/index": 277,
+		"./eo/index.js": 277,
+		"./eo/package": 278,
+		"./eo/package.json": 278,
+		"./es/build_distance_in_words_locale/index": 279,
+		"./es/build_distance_in_words_locale/index.js": 279,
+		"./es/build_format_locale/index": 280,
+		"./es/build_format_locale/index.js": 280,
+		"./es/index": 281,
+		"./es/index.js": 281,
+		"./es/package": 282,
+		"./es/package.json": 282,
+		"./fi/build_distance_in_words_locale/index": 283,
+		"./fi/build_distance_in_words_locale/index.js": 283,
+		"./fi/build_format_locale/index": 284,
+		"./fi/build_format_locale/index.js": 284,
+		"./fi/index": 285,
+		"./fi/index.js": 285,
+		"./fi/package": 286,
+		"./fi/package.json": 286,
+		"./fil/build_distance_in_words_locale/index": 287,
+		"./fil/build_distance_in_words_locale/index.js": 287,
+		"./fil/build_format_locale/index": 288,
+		"./fil/build_format_locale/index.js": 288,
+		"./fil/index": 289,
+		"./fil/index.js": 289,
+		"./fil/package": 290,
+		"./fil/package.json": 290,
+		"./fr/build_distance_in_words_locale/index": 291,
+		"./fr/build_distance_in_words_locale/index.js": 291,
+		"./fr/build_format_locale/index": 292,
+		"./fr/build_format_locale/index.js": 292,
+		"./fr/index": 293,
+		"./fr/index.js": 293,
+		"./fr/package": 294,
+		"./fr/package.json": 294,
+		"./hr/build_distance_in_words_locale/index": 295,
+		"./hr/build_distance_in_words_locale/index.js": 295,
+		"./hr/build_format_locale/index": 296,
+		"./hr/build_format_locale/index.js": 296,
+		"./hr/index": 297,
+		"./hr/index.js": 297,
+		"./hr/package": 298,
+		"./hr/package.json": 298,
+		"./id/build_distance_in_words_locale/index": 299,
+		"./id/build_distance_in_words_locale/index.js": 299,
+		"./id/build_format_locale/index": 300,
+		"./id/build_format_locale/index.js": 300,
+		"./id/index": 301,
+		"./id/index.js": 301,
+		"./id/package": 302,
+		"./id/package.json": 302,
+		"./is/build_distance_in_words_locale/index": 303,
+		"./is/build_distance_in_words_locale/index.js": 303,
+		"./is/build_format_locale/index": 304,
+		"./is/build_format_locale/index.js": 304,
+		"./is/index": 305,
+		"./is/index.js": 305,
+		"./is/package": 306,
+		"./is/package.json": 306,
+		"./it/build_distance_in_words_locale/index": 307,
+		"./it/build_distance_in_words_locale/index.js": 307,
+		"./it/build_format_locale/index": 308,
+		"./it/build_format_locale/index.js": 308,
+		"./it/index": 309,
+		"./it/index.js": 309,
+		"./it/package": 310,
+		"./it/package.json": 310,
+		"./ja/build_distance_in_words_locale/index": 311,
+		"./ja/build_distance_in_words_locale/index.js": 311,
+		"./ja/build_format_locale/index": 312,
+		"./ja/build_format_locale/index.js": 312,
+		"./ja/index": 313,
+		"./ja/index.js": 313,
+		"./ja/package": 314,
+		"./ja/package.json": 314,
+		"./ko/build_distance_in_words_locale/index": 315,
+		"./ko/build_distance_in_words_locale/index.js": 315,
+		"./ko/build_format_locale/index": 316,
+		"./ko/build_format_locale/index.js": 316,
+		"./ko/index": 317,
+		"./ko/index.js": 317,
+		"./ko/package": 318,
+		"./ko/package.json": 318,
+		"./mk/build_distance_in_words_locale/index": 319,
+		"./mk/build_distance_in_words_locale/index.js": 319,
+		"./mk/build_format_locale/index": 320,
+		"./mk/build_format_locale/index.js": 320,
+		"./mk/index": 321,
+		"./mk/index.js": 321,
+		"./mk/package": 322,
+		"./mk/package.json": 322,
+		"./nb/build_distance_in_words_locale/index": 323,
+		"./nb/build_distance_in_words_locale/index.js": 323,
+		"./nb/build_format_locale/index": 324,
+		"./nb/build_format_locale/index.js": 324,
+		"./nb/index": 325,
+		"./nb/index.js": 325,
+		"./nb/package": 326,
+		"./nb/package.json": 326,
+		"./nl/build_distance_in_words_locale/index": 327,
+		"./nl/build_distance_in_words_locale/index.js": 327,
+		"./nl/build_format_locale/index": 328,
+		"./nl/build_format_locale/index.js": 328,
+		"./nl/index": 329,
+		"./nl/index.js": 329,
+		"./nl/package": 330,
+		"./nl/package.json": 330,
+		"./package": 331,
+		"./package.json": 331,
+		"./pl/build_distance_in_words_locale/index": 332,
+		"./pl/build_distance_in_words_locale/index.js": 332,
+		"./pl/build_format_locale/index": 333,
+		"./pl/build_format_locale/index.js": 333,
+		"./pl/index": 334,
+		"./pl/index.js": 334,
+		"./pl/package": 335,
+		"./pl/package.json": 335,
+		"./pt/build_distance_in_words_locale/index": 336,
+		"./pt/build_distance_in_words_locale/index.js": 336,
+		"./pt/build_format_locale/index": 337,
+		"./pt/build_format_locale/index.js": 337,
+		"./pt/index": 338,
+		"./pt/index.js": 338,
+		"./pt/package": 339,
+		"./pt/package.json": 339,
+		"./ro/build_distance_in_words_locale/index": 340,
+		"./ro/build_distance_in_words_locale/index.js": 340,
+		"./ro/build_format_locale/index": 341,
+		"./ro/build_format_locale/index.js": 341,
+		"./ro/index": 342,
+		"./ro/index.js": 342,
+		"./ro/package": 343,
+		"./ro/package.json": 343,
+		"./ru/build_distance_in_words_locale/index": 344,
+		"./ru/build_distance_in_words_locale/index.js": 344,
+		"./ru/build_format_locale/index": 345,
+		"./ru/build_format_locale/index.js": 345,
+		"./ru/index": 346,
+		"./ru/index.js": 346,
+		"./ru/package": 347,
+		"./ru/package.json": 347,
+		"./sk/build_distance_in_words_locale/index": 348,
+		"./sk/build_distance_in_words_locale/index.js": 348,
+		"./sk/build_format_locale/index": 349,
+		"./sk/build_format_locale/index.js": 349,
+		"./sk/index": 350,
+		"./sk/index.js": 350,
+		"./sk/package": 351,
+		"./sk/package.json": 351,
+		"./sv/build_distance_in_words_locale/index": 352,
+		"./sv/build_distance_in_words_locale/index.js": 352,
+		"./sv/build_format_locale/index": 353,
+		"./sv/build_format_locale/index.js": 353,
+		"./sv/index": 354,
+		"./sv/index.js": 354,
+		"./sv/package": 355,
+		"./sv/package.json": 355,
+		"./th/build_distance_in_words_locale/index": 356,
+		"./th/build_distance_in_words_locale/index.js": 356,
+		"./th/build_format_locale/index": 357,
+		"./th/build_format_locale/index.js": 357,
+		"./th/index": 358,
+		"./th/index.js": 358,
+		"./th/package": 359,
+		"./th/package.json": 359,
+		"./tr/build_distance_in_words_locale/index": 360,
+		"./tr/build_distance_in_words_locale/index.js": 360,
+		"./tr/build_format_locale/index": 361,
+		"./tr/build_format_locale/index.js": 361,
+		"./tr/index": 362,
+		"./tr/index.js": 362,
+		"./tr/package": 363,
+		"./tr/package.json": 363,
+		"./zh_cn/build_distance_in_words_locale/index": 364,
+		"./zh_cn/build_distance_in_words_locale/index.js": 364,
+		"./zh_cn/build_format_locale/index": 365,
+		"./zh_cn/build_format_locale/index.js": 365,
+		"./zh_cn/index": 366,
+		"./zh_cn/index.js": 366,
+		"./zh_cn/package": 367,
+		"./zh_cn/package.json": 367,
+		"./zh_tw/build_distance_in_words_locale/index": 368,
+		"./zh_tw/build_distance_in_words_locale/index.js": 368,
+		"./zh_tw/build_format_locale/index": 369,
+		"./zh_tw/build_format_locale/index.js": 369,
+		"./zh_tw/index": 370,
+		"./zh_tw/index.js": 370,
+		"./zh_tw/package": 371,
+		"./zh_tw/package.json": 371
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -31953,20 +31459,20 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 251;
+	webpackContext.id = 244;
 
 
-/***/ }),
-/* 252 */
-/***/ (function(module, exports) {
+/***/ },
+/* 245 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 253 */
-/***/ (function(module, exports) {
+/***/ },
+/* 246 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -32069,11 +31575,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 254 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
@@ -32148,12 +31654,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 255 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(253)
-	var buildFormatLocale = __webpack_require__(254)
+	var buildDistanceInWordsLocale = __webpack_require__(246)
+	var buildFormatLocale = __webpack_require__(247)
 	
 	/**
 	 * @category Locales
@@ -32166,17 +31672,17 @@
 	}
 
 
-/***/ }),
-/* 256 */
-/***/ (function(module, exports) {
+/***/ },
+/* 249 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 257 */
-/***/ (function(module, exports) {
+/***/ },
+/* 250 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -32279,11 +31785,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 258 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['яну', 'фев', 'мар', 'апр', 'май', 'юни', 'юли', 'авг', 'сеп', 'окт', 'ное', 'дек']
@@ -32372,12 +31878,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 259 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(257)
-	var buildFormatLocale = __webpack_require__(258)
+	var buildDistanceInWordsLocale = __webpack_require__(250)
+	var buildFormatLocale = __webpack_require__(251)
 	
 	/**
 	 * @category Locales
@@ -32390,17 +31896,17 @@
 	}
 
 
-/***/ }),
-/* 260 */
-/***/ (function(module, exports) {
+/***/ },
+/* 253 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 261 */
-/***/ (function(module, exports) {
+/***/ },
+/* 254 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -32503,11 +32009,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 262 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['gen', 'feb', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'oct', 'nov', 'des']
@@ -32593,12 +32099,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 263 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(261)
-	var buildFormatLocale = __webpack_require__(262)
+	var buildDistanceInWordsLocale = __webpack_require__(254)
+	var buildFormatLocale = __webpack_require__(255)
 	
 	/**
 	 * @category Locales
@@ -32611,17 +32117,17 @@
 	}
 
 
-/***/ }),
-/* 264 */
-/***/ (function(module, exports) {
+/***/ },
+/* 257 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 265 */
-/***/ (function(module, exports) {
+/***/ },
+/* 258 */
+/***/ function(module, exports) {
 
 	function declensionGroup (scheme, count) {
 	  if (count === 1) {
@@ -32827,11 +32333,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 266 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro']
@@ -32906,12 +32412,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 267 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(265)
-	var buildFormatLocale = __webpack_require__(266)
+	var buildDistanceInWordsLocale = __webpack_require__(258)
+	var buildFormatLocale = __webpack_require__(259)
 	
 	/**
 	 * @category Locales
@@ -32924,17 +32430,17 @@
 	}
 
 
-/***/ }),
-/* 268 */
-/***/ (function(module, exports) {
+/***/ },
+/* 261 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 269 */
-/***/ (function(module, exports) {
+/***/ },
+/* 262 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -33037,11 +32543,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 270 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
@@ -33110,24 +32616,23 @@
 	}
 	
 	function ordinal (number) {
-	  return number + '.'
+	  return '' + number
 	}
 	
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 271 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(269)
-	var buildFormatLocale = __webpack_require__(270)
+	var buildDistanceInWordsLocale = __webpack_require__(262)
+	var buildFormatLocale = __webpack_require__(263)
 	
 	/**
 	 * @category Locales
 	 * @summary Danish locale.
 	 * @author Anders B. Hansen [@Andersbiha]{@link https://github.com/Andersbiha}
-	 * @author [@kgram]{@link https://github.com/kgram}
 	 */
 	module.exports = {
 	  distanceInWords: buildDistanceInWordsLocale(),
@@ -33135,17 +32640,17 @@
 	}
 
 
-/***/ }),
-/* 272 */
-/***/ (function(module, exports) {
+/***/ },
+/* 265 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 273 */
-/***/ (function(module, exports) {
+/***/ },
+/* 266 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -33334,11 +32839,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 274 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // Note: in German, the names of days of the week and months are capitalized.
@@ -33417,12 +32922,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 275 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(273)
-	var buildFormatLocale = __webpack_require__(274)
+	var buildDistanceInWordsLocale = __webpack_require__(266)
+	var buildFormatLocale = __webpack_require__(267)
 	
 	/**
 	 * @category Locales
@@ -33436,17 +32941,17 @@
 	}
 
 
-/***/ }),
-/* 276 */
-/***/ (function(module, exports) {
+/***/ },
+/* 269 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 277 */
-/***/ (function(module, exports) {
+/***/ },
+/* 270 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -33549,11 +33054,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 278 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['Ιαν', 'Φεβ', 'Μαρ', 'Απρ', 'Μαϊ', 'Ιουν', 'Ιουλ', 'Αυγ', 'Σεπ', 'Οκτ', 'Νοε', 'Δεκ']
@@ -33642,12 +33147,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 279 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(277)
-	var buildFormatLocale = __webpack_require__(278)
+	var buildDistanceInWordsLocale = __webpack_require__(270)
+	var buildFormatLocale = __webpack_require__(271)
 	
 	/**
 	 * @category Locales
@@ -33660,25 +33165,25 @@
 	}
 
 
-/***/ }),
-/* 280 */
-/***/ (function(module, exports) {
+/***/ },
+/* 273 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 281 */
-/***/ (function(module, exports) {
+/***/ },
+/* 274 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 282 */
-/***/ (function(module, exports) {
+/***/ },
+/* 275 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -33781,11 +33286,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 283 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aŭg', 'sep', 'okt', 'nov', 'dec']
@@ -33856,12 +33361,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 284 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(282)
-	var buildFormatLocale = __webpack_require__(283)
+	var buildDistanceInWordsLocale = __webpack_require__(275)
+	var buildFormatLocale = __webpack_require__(276)
 	
 	/**
 	 * @category Locales
@@ -33873,17 +33378,17 @@
 	}
 
 
-/***/ }),
-/* 285 */
-/***/ (function(module, exports) {
+/***/ },
+/* 278 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 286 */
-/***/ (function(module, exports) {
+/***/ },
+/* 279 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -33986,17 +33491,17 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 287 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
 	  var monthsFull = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 	  var weekdays2char = ['do', 'lu', 'ma', 'mi', 'ju', 'vi', 'sa']
-	  var weekdays3char = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb']
+	  var weekdays3char = ['dom', 'lun', 'mar', 'mie', 'jue', 'vie', 'sáb']
 	  var weekdaysFull = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado']
 	  var meridiemUppercase = ['AM', 'PM']
 	  var meridiemLowercase = ['am', 'pm']
@@ -34065,19 +33570,18 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 288 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(286)
-	var buildFormatLocale = __webpack_require__(287)
+	var buildDistanceInWordsLocale = __webpack_require__(279)
+	var buildFormatLocale = __webpack_require__(280)
 	
 	/**
 	 * @category Locales
 	 * @summary Spanish locale.
 	 * @author Juan Angosto [@juanangosto]{@link https://github.com/juanangosto}
 	 * @author Guillermo Grau [@guigrpa]{@link https://github.com/guigrpa}
-	 * @author Fernando Agüero [@fjaguero]{@link https://github.com/fjaguero}
 	 */
 	module.exports = {
 	  distanceInWords: buildDistanceInWordsLocale(),
@@ -34085,17 +33589,17 @@
 	}
 
 
-/***/ }),
-/* 289 */
-/***/ (function(module, exports) {
+/***/ },
+/* 282 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 290 */
-/***/ (function(module, exports) {
+/***/ },
+/* 283 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  function futureSeconds (text) {
@@ -34235,11 +33739,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 291 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['tammi', 'helmi', 'maalis', 'huhti', 'touko', 'kesä', 'heinä', 'elo', 'syys', 'loka', 'marras', 'joulu']
@@ -34307,12 +33811,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 292 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(290)
-	var buildFormatLocale = __webpack_require__(291)
+	var buildDistanceInWordsLocale = __webpack_require__(283)
+	var buildFormatLocale = __webpack_require__(284)
 	
 	/**
 	 * @category Locales
@@ -34325,17 +33829,17 @@
 	}
 
 
-/***/ }),
-/* 293 */
-/***/ (function(module, exports) {
+/***/ },
+/* 286 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 294 */
-/***/ (function(module, exports) {
+/***/ },
+/* 287 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -34438,11 +33942,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 295 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['Ene', 'Peb', 'Mar', 'Abr', 'May', 'Hun', 'Hul', 'Ago', 'Set', 'Okt', 'Nob', 'Dis']
@@ -34550,12 +34054,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 296 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(294)
-	var buildFormatLocale = __webpack_require__(295)
+	var buildDistanceInWordsLocale = __webpack_require__(287)
+	var buildFormatLocale = __webpack_require__(288)
 	
 	/**
 	 * @category Locales
@@ -34568,17 +34072,17 @@
 	}
 
 
-/***/ }),
-/* 297 */
-/***/ (function(module, exports) {
+/***/ },
+/* 290 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 298 */
-/***/ (function(module, exports) {
+/***/ },
+/* 291 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -34681,11 +34185,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 299 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juill.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
@@ -34809,12 +34313,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 300 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(298)
-	var buildFormatLocale = __webpack_require__(299)
+	var buildDistanceInWordsLocale = __webpack_require__(291)
+	var buildFormatLocale = __webpack_require__(292)
 	
 	/**
 	 * @category Locales
@@ -34828,17 +34332,17 @@
 	}
 
 
-/***/ }),
-/* 301 */
-/***/ (function(module, exports) {
+/***/ },
+/* 294 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 302 */
-/***/ (function(module, exports) {
+/***/ },
+/* 295 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -35020,11 +34524,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 303 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['sij', 'velj', 'ožu', 'tra', 'svi', 'lip', 'srp', 'kol', 'ruj', 'lis', 'stu', 'pro']
@@ -35109,12 +34613,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 304 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 297 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(302)
-	var buildFormatLocale = __webpack_require__(303)
+	var buildDistanceInWordsLocale = __webpack_require__(295)
+	var buildFormatLocale = __webpack_require__(296)
 	
 	/**
 	 * @category Locales
@@ -35127,17 +34631,17 @@
 	}
 
 
-/***/ }),
-/* 305 */
-/***/ (function(module, exports) {
+/***/ },
+/* 298 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 306 */
-/***/ (function(module, exports) {
+/***/ },
+/* 299 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -35240,11 +34744,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 307 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // Note: in Indonesian, the names of days of the week and months are capitalized.
@@ -35332,12 +34836,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 308 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(306)
-	var buildFormatLocale = __webpack_require__(307)
+	var buildDistanceInWordsLocale = __webpack_require__(299)
+	var buildFormatLocale = __webpack_require__(300)
 	
 	/**
 	 * @category Locales
@@ -35351,17 +34855,17 @@
 	}
 
 
-/***/ }),
-/* 309 */
-/***/ (function(module, exports) {
+/***/ },
+/* 302 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 310 */
-/***/ (function(module, exports) {
+/***/ },
+/* 303 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -35464,11 +34968,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 311 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'maí', 'jún', 'júl', 'ágú', 'sep', 'okt', 'nóv', 'des']
@@ -35543,12 +35047,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 312 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 305 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(310)
-	var buildFormatLocale = __webpack_require__(311)
+	var buildDistanceInWordsLocale = __webpack_require__(303)
+	var buildFormatLocale = __webpack_require__(304)
 	
 	/**
 	 * @category Locales
@@ -35561,17 +35065,17 @@
 	}
 
 
-/***/ }),
-/* 313 */
-/***/ (function(module, exports) {
+/***/ },
+/* 306 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 314 */
-/***/ (function(module, exports) {
+/***/ },
+/* 307 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -35674,18 +35178,18 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 315 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic']
 	  var monthsFull = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
 	  var weekdays2char = ['do', 'lu', 'ma', 'me', 'gi', 've', 'sa']
 	  var weekdays3char = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab']
-	  var weekdaysFull = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato']
+	  var weekdaysFull = ['domenica', 'lunedí', 'martedí', 'mercoledí', 'giovedí', 'venerdí', 'sabato']
 	  var meridiemUppercase = ['AM', 'PM']
 	  var meridiemLowercase = ['am', 'pm']
 	  var meridiemFull = ['a.m.', 'p.m.']
@@ -35753,12 +35257,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 316 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(314)
-	var buildFormatLocale = __webpack_require__(315)
+	var buildDistanceInWordsLocale = __webpack_require__(307)
+	var buildFormatLocale = __webpack_require__(308)
 	
 	/**
 	 * @category Locales
@@ -35771,17 +35275,17 @@
 	}
 
 
-/***/ }),
-/* 317 */
-/***/ (function(module, exports) {
+/***/ },
+/* 310 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 318 */
-/***/ (function(module, exports) {
+/***/ },
+/* 311 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -35884,11 +35388,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 319 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -35963,12 +35467,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 320 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(318)
-	var buildFormatLocale = __webpack_require__(319)
+	var buildDistanceInWordsLocale = __webpack_require__(311)
+	var buildFormatLocale = __webpack_require__(312)
 	
 	/**
 	 * @category Locales
@@ -35982,17 +35486,17 @@
 	}
 
 
-/***/ }),
-/* 321 */
-/***/ (function(module, exports) {
+/***/ },
+/* 314 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 322 */
-/***/ (function(module, exports) {
+/***/ },
+/* 315 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -36095,11 +35599,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 323 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
@@ -36174,12 +35678,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 324 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 317 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(322)
-	var buildFormatLocale = __webpack_require__(323)
+	var buildDistanceInWordsLocale = __webpack_require__(315)
+	var buildFormatLocale = __webpack_require__(316)
 	
 	/**
 	 * @category Locales
@@ -36192,17 +35696,17 @@
 	}
 
 
-/***/ }),
-/* 325 */
-/***/ (function(module, exports) {
+/***/ },
+/* 318 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 326 */
-/***/ (function(module, exports) {
+/***/ },
+/* 319 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -36305,11 +35809,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 327 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 320 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['јан', 'фев', 'мар', 'апр', 'мај', 'јун', 'јул', 'авг', 'сеп', 'окт', 'ное', 'дек']
@@ -36394,12 +35898,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 328 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 321 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(326)
-	var buildFormatLocale = __webpack_require__(327)
+	var buildDistanceInWordsLocale = __webpack_require__(319)
+	var buildFormatLocale = __webpack_require__(320)
 	
 	/**
 	 * @category Locales
@@ -36412,17 +35916,17 @@
 	}
 
 
-/***/ }),
-/* 329 */
-/***/ (function(module, exports) {
+/***/ },
+/* 322 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 330 */
-/***/ (function(module, exports) {
+/***/ },
+/* 323 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -36525,11 +36029,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 331 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 324 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan.', 'feb.', 'mars', 'april', 'mai', 'juni', 'juli', 'aug.', 'sep.', 'okt.', 'nov.', 'des.']
@@ -36604,12 +36108,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 332 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 325 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(330)
-	var buildFormatLocale = __webpack_require__(331)
+	var buildDistanceInWordsLocale = __webpack_require__(323)
+	var buildFormatLocale = __webpack_require__(324)
 	
 	/**
 	 * @category Locales
@@ -36622,17 +36126,17 @@
 	}
 
 
-/***/ }),
-/* 333 */
-/***/ (function(module, exports) {
+/***/ },
+/* 326 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 334 */
-/***/ (function(module, exports) {
+/***/ },
+/* 327 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -36735,11 +36239,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 335 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
@@ -36814,12 +36318,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 336 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(334)
-	var buildFormatLocale = __webpack_require__(335)
+	var buildDistanceInWordsLocale = __webpack_require__(327)
+	var buildFormatLocale = __webpack_require__(328)
 	
 	/**
 	 * @category Locales
@@ -36833,25 +36337,25 @@
 	}
 
 
-/***/ }),
-/* 337 */
-/***/ (function(module, exports) {
+/***/ },
+/* 330 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 338 */
-/***/ (function(module, exports) {
+/***/ },
+/* 331 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../typings.d.ts"
 	};
 
-/***/ }),
-/* 339 */
-/***/ (function(module, exports) {
+/***/ },
+/* 332 */
+/***/ function(module, exports) {
 
 	function declensionGroup (scheme, count) {
 	  if (count === 1) {
@@ -37020,11 +36524,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 340 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru']
@@ -37096,12 +36600,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 341 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 334 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(339)
-	var buildFormatLocale = __webpack_require__(340)
+	var buildDistanceInWordsLocale = __webpack_require__(332)
+	var buildFormatLocale = __webpack_require__(333)
 	
 	/**
 	 * @category Locales
@@ -37115,17 +36619,17 @@
 	}
 
 
-/***/ }),
-/* 342 */
-/***/ (function(module, exports) {
+/***/ },
+/* 335 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 343 */
-/***/ (function(module, exports) {
+/***/ },
+/* 336 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -37228,11 +36732,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 344 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 337 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
@@ -37307,12 +36811,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 345 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 338 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(343)
-	var buildFormatLocale = __webpack_require__(344)
+	var buildDistanceInWordsLocale = __webpack_require__(336)
+	var buildFormatLocale = __webpack_require__(337)
 	
 	/**
 	 * @category Locales
@@ -37325,17 +36829,17 @@
 	}
 
 
-/***/ }),
-/* 346 */
-/***/ (function(module, exports) {
+/***/ },
+/* 339 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 347 */
-/***/ (function(module, exports) {
+/***/ },
+/* 340 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -37438,11 +36942,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 348 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 341 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // Note: in Romanian language the weekdays and months should be in the lowercase.
@@ -37518,12 +37022,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 349 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 342 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(347)
-	var buildFormatLocale = __webpack_require__(348)
+	var buildDistanceInWordsLocale = __webpack_require__(340)
+	var buildFormatLocale = __webpack_require__(341)
 	
 	/**
 	 * @category Locales
@@ -37536,17 +37040,17 @@
 	}
 
 
-/***/ }),
-/* 350 */
-/***/ (function(module, exports) {
+/***/ },
+/* 343 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 351 */
-/***/ (function(module, exports) {
+/***/ },
+/* 344 */
+/***/ function(module, exports) {
 
 	function declension (scheme, count) {
 	  // scheme for count=1 exists
@@ -37784,11 +37288,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 352 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // http://new.gramota.ru/spravka/buro/search-answer?s=242637
@@ -37879,12 +37383,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 353 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(351)
-	var buildFormatLocale = __webpack_require__(352)
+	var buildDistanceInWordsLocale = __webpack_require__(344)
+	var buildFormatLocale = __webpack_require__(345)
 	
 	/**
 	 * @category Locales
@@ -37896,17 +37400,17 @@
 	}
 
 
-/***/ }),
-/* 354 */
-/***/ (function(module, exports) {
+/***/ },
+/* 347 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 355 */
-/***/ (function(module, exports) {
+/***/ },
+/* 348 */
+/***/ function(module, exports) {
 
 	function declensionGroup (scheme, count) {
 	  if (count === 1) {
@@ -38112,11 +37616,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 356 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 349 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'máj', 'jún', 'júl', 'aug', 'sep', 'okt', 'nov', 'dec']
@@ -38191,12 +37695,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 357 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 350 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(355)
-	var buildFormatLocale = __webpack_require__(356)
+	var buildDistanceInWordsLocale = __webpack_require__(348)
+	var buildFormatLocale = __webpack_require__(349)
 	
 	/**
 	 * @category Locales
@@ -38209,17 +37713,17 @@
 	}
 
 
-/***/ }),
-/* 358 */
-/***/ (function(module, exports) {
+/***/ },
+/* 351 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 359 */
-/***/ (function(module, exports) {
+/***/ },
+/* 352 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -38339,11 +37843,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 360 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 353 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
@@ -38417,12 +37921,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 361 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 354 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(359)
-	var buildFormatLocale = __webpack_require__(360)
+	var buildDistanceInWordsLocale = __webpack_require__(352)
+	var buildFormatLocale = __webpack_require__(353)
 	
 	/**
 	 * @category Locales
@@ -38435,17 +37939,17 @@
 	}
 
 
-/***/ }),
-/* 362 */
-/***/ (function(module, exports) {
+/***/ },
+/* 355 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 363 */
-/***/ (function(module, exports) {
+/***/ },
+/* 356 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -38552,11 +38056,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 364 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 357 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.']
@@ -38619,12 +38123,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 365 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 358 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(363)
-	var buildFormatLocale = __webpack_require__(364)
+	var buildDistanceInWordsLocale = __webpack_require__(356)
+	var buildFormatLocale = __webpack_require__(357)
 	
 	/**
 	 * @category Locales
@@ -38637,17 +38141,17 @@
 	}
 
 
-/***/ }),
-/* 366 */
-/***/ (function(module, exports) {
+/***/ },
+/* 359 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 367 */
-/***/ (function(module, exports) {
+/***/ },
+/* 360 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -38761,11 +38265,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 368 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 361 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  // Note: in Turkish, the names of days of the week and months are capitalized.
@@ -38873,12 +38377,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 369 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 362 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(367)
-	var buildFormatLocale = __webpack_require__(368)
+	var buildDistanceInWordsLocale = __webpack_require__(360)
+	var buildFormatLocale = __webpack_require__(361)
 	
 	/**
 	 * @category Locales
@@ -38891,17 +38395,17 @@
 	}
 
 
-/***/ }),
-/* 370 */
-/***/ (function(module, exports) {
+/***/ },
+/* 363 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 371 */
-/***/ (function(module, exports) {
+/***/ },
+/* 364 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -39004,11 +38508,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 372 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 365 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -39083,12 +38587,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 373 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 366 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(371)
-	var buildFormatLocale = __webpack_require__(372)
+	var buildDistanceInWordsLocale = __webpack_require__(364)
+	var buildFormatLocale = __webpack_require__(365)
 	
 	/**
 	 * @category Locales
@@ -39101,17 +38605,17 @@
 	}
 
 
-/***/ }),
-/* 374 */
-/***/ (function(module, exports) {
+/***/ },
+/* 367 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 375 */
-/***/ (function(module, exports) {
+/***/ },
+/* 368 */
+/***/ function(module, exports) {
 
 	function buildDistanceInWordsLocale () {
 	  var distanceInWordsLocale = {
@@ -39214,11 +38718,11 @@
 	module.exports = buildDistanceInWordsLocale
 
 
-/***/ }),
-/* 376 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildFormattingTokensRegExp = __webpack_require__(248)
+	var buildFormattingTokensRegExp = __webpack_require__(241)
 	
 	function buildFormatLocale () {
 	  var months3char = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -39293,12 +38797,12 @@
 	module.exports = buildFormatLocale
 
 
-/***/ }),
-/* 377 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 370 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var buildDistanceInWordsLocale = __webpack_require__(375)
-	var buildFormatLocale = __webpack_require__(376)
+	var buildDistanceInWordsLocale = __webpack_require__(368)
+	var buildFormatLocale = __webpack_require__(369)
 	
 	/**
 	 * @category Locales
@@ -39311,17 +38815,17 @@
 	}
 
 
-/***/ }),
-/* 378 */
-/***/ (function(module, exports) {
+/***/ },
+/* 371 */
+/***/ function(module, exports) {
 
 	module.exports = {
 		"typings": "../../typings.d.ts"
 	};
 
-/***/ }),
-/* 379 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -39329,7 +38833,7 @@
 	    value: true
 	});
 	
-	var _app = __webpack_require__(380);
+	var _app = __webpack_require__(373);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
@@ -39337,21 +38841,25 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _I18n = __webpack_require__(208);
+	var _I18n = __webpack_require__(201);
 	
-	var _classnames = __webpack_require__(382);
+	var _classnames = __webpack_require__(375);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _AddRecipient = __webpack_require__(383);
+	var _AddRecipient = __webpack_require__(376);
 	
 	var _AddRecipient2 = _interopRequireDefault(_AddRecipient);
 	
-	var _ShareForm = __webpack_require__(384);
+	var _Revocation = __webpack_require__(377);
+	
+	var _Revocation2 = _interopRequireDefault(_Revocation);
+	
+	var _ShareForm = __webpack_require__(378);
 	
 	var _ShareForm2 = _interopRequireDefault(_ShareForm);
 	
-	var _Tips = __webpack_require__(385);
+	var _Tips = __webpack_require__(379);
 	
 	var _Tips2 = _interopRequireDefault(_Tips);
 	
@@ -39359,22 +38867,22 @@
 	
 	var App = function App(_ref) {
 	    var t = _ref.t;
-	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}), _react2.default.createElement(_Tips2.default, {}));
+	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}), _react2.default.createElement(_Revocation2.default, {}), _react2.default.createElement(_Tips2.default, {}));
 	};
 	
 	exports.default = (0, _I18n.translate)()(App);
 
-/***/ }),
-/* 380 */
-/***/ (function(module, exports) {
+/***/ },
+/* 373 */
+/***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"title":"_1VC2xx3kUAm9cQMrud_-QU","spin":"IXFdI46qtOyqN0s8YCJVV"};
 
-/***/ }),
-/* 381 */,
-/* 382 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 374 */,
+/* 375 */
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	  Copyright (c) 2016 Jed Watson.
@@ -39426,9 +38934,9 @@
 	}());
 
 
-/***/ }),
-/* 383 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 376 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -39442,9 +38950,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _I18n = __webpack_require__(208);
+	var _I18n = __webpack_require__(201);
 	
-	var _classnames = __webpack_require__(382);
+	var _classnames = __webpack_require__(375);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -39575,7 +39083,8 @@
 	                        { type: 'submit' },
 	                        'Add Recipient'
 	                    )
-	                )
+	                ),
+	                _react2.default.createElement('hr', null)
 	            );
 	        }
 	    }, {
@@ -39643,9 +39152,235 @@
 	
 	exports.default = (0, _I18n.translate)()(AddRecipient);
 
-/***/ }),
-/* 384 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 377 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(198);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _I18n = __webpack_require__(201);
+	
+	var _classnames = __webpack_require__(375);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var data = document.querySelector('[role=application]').dataset;
+	
+	var RevocationForm = function (_React$Component) {
+	    _inherits(RevocationForm, _React$Component);
+	
+	    function RevocationForm(props) {
+	        _classCallCheck(this, RevocationForm);
+	
+	        var _this2 = _possibleConstructorReturn(this, (RevocationForm.__proto__ || Object.getPrototypeOf(RevocationForm)).call(this, props));
+	
+	        var instance = data.cozyDomain;
+	        if (instance != "cozy.tools:8080") {
+	            instance = "https://" + instance;
+	        } else {
+	            instance = "http://" + instance;
+	        }
+	        _this2.state = {
+	            instance: instance,
+	            sharingid: '',
+	            clientid: ''
+	        };
+	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
+	        _this2.onRevokeSharingSubmit = _this2.onRevokeSharingSubmit.bind(_this2);
+	        _this2.onRevokeRecipientSubmit = _this2.onRevokeRecipientSubmit.bind(_this2);
+	
+	        return _this2;
+	    }
+	
+	    _createClass(RevocationForm, [{
+	        key: 'handleInputChange',
+	        value: function handleInputChange(event) {
+	            var target = event.target;
+	            var value = target.value;
+	            var name = target.name;
+	
+	            this.setState(_defineProperty({}, name, value));
+	        }
+	    }, {
+	        key: 'onRevokeSharingSubmit',
+	        value: function onRevokeSharingSubmit(event) {
+	            event.preventDefault();
+	            this.setState({}, this.revokeSharing);
+	        }
+	    }, {
+	        key: 'onRevokeRecipientSubmit',
+	        value: function onRevokeRecipientSubmit(event) {
+	            event.preventDefault();
+	            this.setState({}, this.revokeRecipient);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'Revoke Sharing'
+	                    ),
+	                    _react2.default.createElement(
+	                        'form',
+	                        { onSubmit: this.onRevokeSharingSubmit },
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement(
+	                                'label',
+	                                null,
+	                                'Which sharing?'
+	                            ),
+	                            _react2.default.createElement('input', {
+	                                type: 'text',
+	                                name: 'instance',
+	                                placeholder: this.state.instance,
+	                                value: this.state.instance,
+	                                onInput: this.handleInputChange }),
+	                            _react2.default.createElement('input', {
+	                                type: 'text',
+	                                name: 'sharingid',
+	                                placeholder: 'SharingID',
+	                                value: this.state.sharingid,
+	                                onInput: this.handleInputChange })
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'submit' },
+	                            'Revoke Sharing'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'Revoke Recipient'
+	                    ),
+	                    _react2.default.createElement(
+	                        'form',
+	                        { onSubmit: this.onRevokeRecipientSubmit },
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement(
+	                                'label',
+	                                null,
+	                                'Which sharing?'
+	                            ),
+	                            _react2.default.createElement('input', {
+	                                type: 'text',
+	                                name: 'instance',
+	                                placeholder: this.state.instance,
+	                                value: this.state.instance,
+	                                onInput: this.handleInputChange }),
+	                            _react2.default.createElement('input', {
+	                                type: 'text',
+	                                name: 'sharingid',
+	                                placeholder: 'SharingID',
+	                                value: this.state.sharingid,
+	                                onInput: this.handleInputChange }),
+	                            _react2.default.createElement('input', {
+	                                type: 'text',
+	                                name: 'clientid',
+	                                placeholder: 'ClientID',
+	                                value: this.state.clientid,
+	                                onInput: this.handleInputChange })
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'submit' },
+	                            'Revoke Recipient'
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }, {
+	        key: 'revokeSharing',
+	        value: function revokeSharing() {
+	            var sid = this.state.sharingid;
+	            console.log("revoke sharing " + sid);
+	            var target = this.state.instance + "/sharings/" + sid;
+	            this.sendXHR("DELETE", target, null, function (res) {
+	                console.log("revoke sharing : ", JSON.stringify(res));
+	            });
+	        }
+	    }, {
+	        key: 'revokeRecipient',
+	        value: function revokeRecipient() {
+	            var sid = this.state.sharingid;
+	            var cid = this.state.clientid;
+	            console.log("revoke " + cid + " for sharing " + sid);
+	            var target = this.state.instance + "/sharings/" + sid + "/recipient/" + cid;
+	            this.sendXHR("DELETE", target, null, function (res) {
+	                console.log("revoke recipient : ", JSON.stringify(res));
+	            });
+	        }
+	    }, {
+	        key: 'sendXHR',
+	        value: function sendXHR(method, target, data, callback) {
+	            var xmlhttp = new XMLHttpRequest();
+	            var _this = this;
+	            xmlhttp.onreadystatechange = function () {
+	                if (xmlhttp.readyState === 4) {
+	                    var response = xmlhttp.responseText;
+	                    if (xmlhttp.status === 200 || xmlhttp.status === 201) {
+	                        var data = JSON.parse(response).data;
+	                        callback(data);
+	                    } else {
+	                        console.log("error : ", JSON.stringify(response));
+	                    }
+	                }
+	            };
+	            xmlhttp.open(method, target, true);
+	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.send(JSON.stringify(data));
+	        }
+	    }]);
+	
+	    return RevocationForm;
+	}(_react2.default.Component);
+	
+	var Revocation = function Revocation(_ref) {
+	    var t = _ref.t;
+	    return _react2.default.createElement(RevocationForm, {});
+	};
+	
+	exports.default = (0, _I18n.translate)()(Revocation);
+
+/***/ },
+/* 378 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_provided_cozy_dot_client) {'use strict';
 	
@@ -39659,7 +39394,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _I18n = __webpack_require__(208);
+	var _I18n = __webpack_require__(201);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -39944,9 +39679,9 @@
 	exports.default = (0, _I18n.translate)()(ShareForm);
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-/***/ }),
-/* 385 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ },
+/* 379 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -39960,9 +39695,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _I18n = __webpack_require__(208);
+	var _I18n = __webpack_require__(201);
 	
-	var _classnames = __webpack_require__(382);
+	var _classnames = __webpack_require__(375);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -40157,6 +39892,6 @@
 	
 	exports.default = (0, _I18n.translate)()(Tips);
 
-/***/ })
+/***/ }
 /******/ ]);
 //# sourceMappingURL=app.js.map
