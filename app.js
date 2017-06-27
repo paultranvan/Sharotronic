@@ -39633,9 +39633,9 @@
 	            };
 	
 	            if (this.state.contactid == '') {
-	                createRecipientAndShare(formData);
+	                this.createRecipientAndShare(formData);
 	            } else {
-	                createSharing(formData);
+	                this.createSharing(formData);
 	            }
 	        }
 	    }, {
