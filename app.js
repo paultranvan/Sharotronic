@@ -39635,7 +39635,7 @@
 	            if (this.state.contactid == '') {
 	                this.createRecipientAndShare(formData);
 	            } else {
-	                this.createSharing(formData);
+	                this.createSharing(formData, this.state.contactid);
 	            }
 	        }
 	    }, {
@@ -39652,7 +39652,7 @@
 	            // Create the recipient
 	            this.sendXHR(recipientTarget, recipient, function (res) {
 	                var rec = {
-	                    type: "io.cozy.recipients",
+	                    type: "io.cozy.contacts",
 	                    id: res.id
 	                };
 	                var recipients = [{
@@ -39669,10 +39669,18 @@
 	        }
 	    }, {
 	        key: 'createSharing',
-	        value: function createSharing(formData) {
+	        value: function createSharing(formData, contactid) {
+	            var rec = {
+	                type: "io.cozy.contacts",
+	                id: contactid
+	            };
+	            var recipients = [{
+	                recipient: rec
+	            }];
+	            formData.recipients = recipients;
 	            var sharingTarget = _this.state.instance + "/sharings/";
 	            // Create the sharing
-	            _this.sendXHR(sharingTarget, formData, function (res) {
+	            this.sendXHR(sharingTarget, formData, function (res) {
 	                console.log("Sharing ok : ", JSON.stringify(res));
 	            });
 	        }
