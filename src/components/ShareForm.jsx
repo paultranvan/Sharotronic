@@ -25,6 +25,7 @@ class ShareForm extends React.Component {
             email: '',
             url: '',
             sharingType: '',
+            contactid: '',
             desc: 'Share it share it !'
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -96,7 +97,15 @@ class ShareForm extends React.Component {
                         onInput={this.handleInputChange} >
                     </input>
                     <div>
-                        <label>With who?</label>
+                        <label>With who? </label>
+                        <input
+                            type='text'
+                            name="contactid"
+                            placeholder='ContactID'
+                            value={this.state.contactid}
+                            onInput={this.handleInputChange} >
+                        </input>
+                        <label> OR (create new one)</label>
                         <input
                             type='text'
                             name="email"
@@ -178,14 +187,22 @@ class ShareForm extends React.Component {
                 }
             }
         }
-
-
         var formData = {
             sharing_type: this.state.sharingType,
             permissions: perm,
             desc: this.state.desc
         }
 
+        if (this.state.contactid == '') {
+          this.createRecipientAndShare(formData)
+        }
+        else {
+          this.createSharing(formData)
+        }
+
+    }
+
+    createRecipientAndShare(formData) {
         var recipient = {
             email: this.state.email,
             url: this.state.url
@@ -211,8 +228,14 @@ class ShareForm extends React.Component {
                 console.log("Sharing ok : ", JSON.stringify(res))
             })
         })
+    }
 
-
+    createSharing(formData) {
+      var sharingTarget = _this.state.instance + "/sharings/"
+      // Create the sharing
+      _this.sendXHR(sharingTarget, formData, function(res) {
+          console.log("Sharing ok : ", JSON.stringify(res))
+      })
     }
 
     sendXHR(target, data, callback) {
