@@ -39678,7 +39678,7 @@
 	                recipient: rec
 	            }];
 	            formData.recipients = recipients;
-	            var sharingTarget = _this.state.instance + "/sharings/";
+	            var sharingTarget = this.state.instance + "/sharings/";
 	            // Create the sharing
 	            this.sendXHR(sharingTarget, formData, function (res) {
 	                console.log("Sharing ok : ", JSON.stringify(res));
