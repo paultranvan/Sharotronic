@@ -39432,6 +39432,7 @@
 	            email: '',
 	            url: '',
 	            sharingType: '',
+	            contactid: '',
 	            desc: 'Share it share it !'
 	        };
 	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
@@ -39524,7 +39525,18 @@
 	                        _react2.default.createElement(
 	                            'label',
 	                            null,
-	                            'With who?'
+	                            'With who? '
+	                        ),
+	                        _react2.default.createElement('input', {
+	                            type: 'text',
+	                            name: 'contactid',
+	                            placeholder: 'ContactID',
+	                            value: this.state.contactid,
+	                            onInput: this.handleInputChange }),
+	                        _react2.default.createElement(
+	                            'label',
+	                            null,
+	                            ' OR (create new one)'
 	                        ),
 	                        _react2.default.createElement('input', {
 	                            type: 'text',
@@ -39614,13 +39626,21 @@
 	                    }
 	                };
 	            }
-	
 	            var formData = {
 	                sharing_type: this.state.sharingType,
 	                permissions: perm,
 	                desc: this.state.desc
 	            };
 	
+	            if (this.state.contactid == '') {
+	                createRecipientAndShare(formData);
+	            } else {
+	                createSharing(formData);
+	            }
+	        }
+	    }, {
+	        key: 'createRecipientAndShare',
+	        value: function createRecipientAndShare(formData) {
 	            var recipient = {
 	                email: this.state.email,
 	                url: this.state.url
@@ -39645,6 +39665,15 @@
 	                _this.sendXHR(sharingTarget, formData, function (res) {
 	                    console.log("Sharing ok : ", JSON.stringify(res));
 	                });
+	            });
+	        }
+	    }, {
+	        key: 'createSharing',
+	        value: function createSharing(formData) {
+	            var sharingTarget = _this.state.instance + "/sharings/";
+	            // Create the sharing
+	            _this.sendXHR(sharingTarget, formData, function (res) {
+	                console.log("Sharing ok : ", JSON.stringify(res));
 	            });
 	        }
 	    }, {
