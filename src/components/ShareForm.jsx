@@ -26,6 +26,7 @@ class ShareForm extends React.Component {
             url: '',
             sharingType: '',
             contactid: '',
+            slug: 'sharotronic',
             desc: 'Share it share it !'
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -148,6 +149,16 @@ class ShareForm extends React.Component {
                                 onChange={this.handleInputChange} />
                         </label>
                     </div>
+                    <div>
+                      <label>App Slug: </label>
+                        <input
+                            type='text'
+                            name="slug"
+                            placeholder='Sharotronic'
+                            value={this.state.slug}
+                            onInput={this.handleInputChange}>
+                        </input>
+                    </div>
                     <button type='submit'>
                         Share it!
                     </button>
@@ -190,7 +201,8 @@ class ShareForm extends React.Component {
         var formData = {
             sharing_type: this.state.sharingType,
             permissions: perm,
-            desc: this.state.desc
+            desc: this.state.desc,
+            app_slug: this.state.slug
         }
 
         if (this.state.contactid == '') {
