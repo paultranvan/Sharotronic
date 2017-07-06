@@ -39206,10 +39206,10 @@
 	        }
 	        _this2.state = {
 	            instance: instance,
-	            sharingid: '',
-	            clientid: ''
+	            sharingid: ''
 	        };
 	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
+	        _this2.onSubmit = _this2.onSubmit.bind(_this2);
 	        return _this2;
 	    }
 	
