@@ -16,10 +16,10 @@ class GetForm extends React.Component {
         }
         this.state = {
             instance: instance,
-            sharingid: '',
-            clientid: '',
+            sharingid: ''
         };
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
     handleInputChange(event) {
         const target = event.target;
@@ -90,6 +90,7 @@ class GetForm extends React.Component {
       };
       xmlhttp.open(method, target, true);
       xmlhttp.setRequestHeader('Content-type', 'application/json');
+      xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
       xmlhttp.send(JSON.stringify(data));
     }
 }
