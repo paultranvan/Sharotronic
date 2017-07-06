@@ -1,6 +1,6 @@
 import React from 'react'
 import { translate } from '../lib/I18n'
-const data = document.querySelector('[role=application]').dataset
+const appData = document.querySelector('[role=application]').dataset
 
 class ShareForm extends React.Component {
     propTypes: {
@@ -8,9 +8,9 @@ class ShareForm extends React.Component {
     }
     constructor(props) {
         super(props);
-        var instance = data.cozyDomain
+        var instance = appData.cozyDomain
 
-        if(data.cozyDomain.indexOf(':8080') > -1) {
+        if(appData.cozyDomain.indexOf(':8080') > -1) {
             instance = "http://"+instance
         }
         else {
@@ -266,7 +266,7 @@ class ShareForm extends React.Component {
         };
         xmlhttp.open('POST', target, true);
         xmlhttp.setRequestHeader('Content-type', 'application/json');
-        xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+        xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
         xmlhttp.send(JSON.stringify(data));
     }
 }

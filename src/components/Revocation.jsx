@@ -2,12 +2,12 @@ import React from 'react'
 import { translate } from '../lib/I18n'
 import classNames from 'classnames'
 
-const data = document.querySelector('[role=application]').dataset
+const appData = document.querySelector('[role=application]').dataset
 
 class RevocationForm extends React.Component {
     constructor(props) {
         super(props)
-        var instance = data.cozyDomain
+        var instance = appData.cozyDomain
         if(instance != "cozy.tools:8080") {
             instance = "https://"+instance
         }
@@ -142,7 +142,7 @@ class RevocationForm extends React.Component {
       };
       xmlhttp.open(method, target, true);
       xmlhttp.setRequestHeader('Content-type', 'application/json');
-      xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+      xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
       xmlhttp.send(JSON.stringify(data));
     }
 }
