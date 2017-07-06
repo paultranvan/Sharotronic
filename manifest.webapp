@@ -24,7 +24,7 @@
       "description": "Required by the cozy-bar to display the icons of the apps",
       "type": "io.cozy.apps",
       "verbs": ["GET"]
-  },
+    },
     "sharings": {
         "description": "share",
         "type": "io.cozy.sharings"
@@ -36,6 +36,14 @@
     "settings": {
         "description": "cozy settings",
         "type": "io.cozy.settings"
+    },
+    "files": {
+      "description": "cozy files",
+      "type": "io.cozy.files"
+    },
+    "albums": {
+      "description": "cozy files",
+      "type": "io.cozy.photos.albums"
     }
   }
 }
