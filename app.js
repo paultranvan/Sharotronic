@@ -39142,6 +39142,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39300,6 +39301,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39526,6 +39528,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39872,6 +39875,7 @@
 	            };
 	            xmlhttp.open('POST', target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
