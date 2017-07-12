@@ -33,6 +33,10 @@
         "description": "sharing recipients",
         "type": "io.cozy.recipients"
     },
+    "contacts": {
+        "description": "sharing contacts",
+        "type": "io.cozy.contacts"
+    },
     "settings": {
         "description": "cozy settings",
         "type": "io.cozy.settings"

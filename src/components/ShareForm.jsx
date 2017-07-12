@@ -226,7 +226,7 @@ class ShareForm extends React.Component {
         // Create the recipient
         this.sendXHR(recipientTarget, recipient, function(res) {
             var rec = {
-                type: "io.cozy.recipients",
+                type: "io.cozy.contacts",
                 id: res.id
             };
             var recipients = [{
