@@ -209,6 +209,14 @@ class ShareForm extends React.Component {
           this.createRecipientAndShare(formData)
         }
         else {
+          var rec = {
+              type: "io.cozy.contacts",
+              id: this.state.contactid
+          };
+          var recipients = [{
+              recipient: rec
+          }];
+          formData.recipients = recipients
           this.createSharing(formData)
         }
 
@@ -243,9 +251,9 @@ class ShareForm extends React.Component {
     }
 
     createSharing(formData) {
-      var sharingTarget = _this.state.instance + "/sharings/"
+      var sharingTarget = this.state.instance + "/sharings/"
       // Create the sharing
-      _this.sendXHR(sharingTarget, formData, function(res) {
+      this.sendXHR(sharingTarget, formData, function(res) {
           console.log("Sharing ok : ", JSON.stringify(res))
       })
     }
