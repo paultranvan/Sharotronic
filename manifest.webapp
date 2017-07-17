@@ -46,8 +46,9 @@
       "type": "io.cozy.files"
     },
     "albums": {
-      "description": "cozy files",
-      "type": "io.cozy.photos.albums"
+      "description": "Required to manage photos albums",
+      "type": "io.cozy.photos.albums",
+      "methods": ["GET", "POST", "PUT"]
     }
   }
 }
