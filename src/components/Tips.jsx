@@ -11,7 +11,6 @@ class ProTips extends React.Component {
         return (
             <div>
 
-            <hr></hr>
                 <h3>Pro Tips to use Sharotronic 2000</h3>
                 <div> Sharotronics 2000 is the ultime app to share
                     everything you always wanted to. Its smooth interface

@@ -100,6 +100,7 @@ class RevocationForm extends React.Component {
                           Revoke Recipient
                       </button>
                   </form>
+                  <hr></hr>
                 </div>
           </div>
         )

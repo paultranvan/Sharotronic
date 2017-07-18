@@ -57,7 +57,7 @@ class DestForm extends React.Component {
                 </input>
                 <input
                     type='text'
-                    name="destfolder"
+                    name="dirID"
                     placeholder='Destination folder ID'
                     value={this.state.dirID}
                     onInput={this.handleInputChange} >
