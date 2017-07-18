@@ -39489,7 +39489,8 @@
 	                            { type: 'submit' },
 	                            'Revoke Recipient'
 	                        )
-	                    )
+	                    ),
+	                    _react2.default.createElement('hr', null)
 	                )
 	            );
 	        }
@@ -40012,7 +40013,7 @@
 	                            onInput: this.handleInputChange }),
 	                        _react2.default.createElement('input', {
 	                            type: 'text',
-	                            name: 'destfolder',
+	                            name: 'dirID',
 	                            placeholder: 'Destination folder ID',
 	                            value: this.state.dirID,
 	                            onInput: this.handleInputChange })
@@ -40116,7 +40117,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement('hr', null),
 	                _react2.default.createElement(
 	                    'h3',
 	                    null,
