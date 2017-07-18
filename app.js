@@ -38970,7 +38970,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var data = document.querySelector('[role=application]').dataset;
+	var appData = document.querySelector('[role=application]').dataset;
 	
 	var AddRecipientForm = function (_React$Component) {
 	    _inherits(AddRecipientForm, _React$Component);
@@ -38980,7 +38980,7 @@
 	
 	        var _this2 = _possibleConstructorReturn(this, (AddRecipientForm.__proto__ || Object.getPrototypeOf(AddRecipientForm)).call(this, props));
 	
-	        var instance = data.cozyDomain;
+	        var instance = appData.cozyDomain;
 	        if (instance != "cozy.tools:8080") {
 	            instance = "https://" + instance;
 	        } else {
@@ -39142,7 +39142,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
-	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39189,7 +39189,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var data = document.querySelector('[role=application]').dataset;
+	var appData = document.querySelector('[role=application]').dataset;
 	
 	var GetForm = function (_React$Component) {
 	    _inherits(GetForm, _React$Component);
@@ -39199,7 +39199,7 @@
 	
 	        var _this2 = _possibleConstructorReturn(this, (GetForm.__proto__ || Object.getPrototypeOf(GetForm)).call(this, props));
 	
-	        var instance = data.cozyDomain;
+	        var instance = appData.cozyDomain;
 	        if (instance != "cozy.tools:8080") {
 	            instance = "https://" + instance;
 	        } else {
@@ -39301,7 +39301,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
-	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39348,7 +39348,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var data = document.querySelector('[role=application]').dataset;
+	var appData = document.querySelector('[role=application]').dataset;
 	
 	var RevocationForm = function (_React$Component) {
 	    _inherits(RevocationForm, _React$Component);
@@ -39358,7 +39358,7 @@
 	
 	        var _this2 = _possibleConstructorReturn(this, (RevocationForm.__proto__ || Object.getPrototypeOf(RevocationForm)).call(this, props));
 	
-	        var instance = data.cozyDomain;
+	        var instance = appData.cozyDomain;
 	        if (instance != "cozy.tools:8080") {
 	            instance = "https://" + instance;
 	        } else {
@@ -39367,7 +39367,7 @@
 	        _this2.state = {
 	            instance: instance,
 	            sharingid: '',
-	            clientid: ''
+	            contactid: ''
 	        };
 	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
 	        _this2.onRevokeSharingSubmit = _this2.onRevokeSharingSubmit.bind(_this2);
@@ -39475,9 +39475,9 @@
 	                                onInput: this.handleInputChange }),
 	                            _react2.default.createElement('input', {
 	                                type: 'text',
-	                                name: 'clientid',
-	                                placeholder: 'ClientID',
-	                                value: this.state.clientid,
+	                                name: 'contactid',
+	                                placeholder: 'ContactID',
+	                                value: this.state.contactid,
 	                                onInput: this.handleInputChange })
 	                        ),
 	                        _react2.default.createElement(
@@ -39503,7 +39503,7 @@
 	        key: 'revokeRecipient',
 	        value: function revokeRecipient() {
 	            var sid = this.state.sharingid;
-	            var cid = this.state.clientid;
+	            var cid = this.state.contactid;
 	            console.log("revoke " + cid + " for sharing " + sid);
 	            var target = this.state.instance + "/sharings/" + sid + "/recipient/" + cid;
 	            this.sendXHR("DELETE", target, null, function (res) {
@@ -39528,7 +39528,7 @@
 	            };
 	            xmlhttp.open(method, target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
-	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
@@ -39571,7 +39571,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var data = document.querySelector('[role=application]').dataset;
+	var appData = document.querySelector('[role=application]').dataset;
 	
 	var ShareForm = function (_React$Component) {
 	    _inherits(ShareForm, _React$Component);
@@ -39581,9 +39581,9 @@
 	
 	        var _this2 = _possibleConstructorReturn(this, (ShareForm.__proto__ || Object.getPrototypeOf(ShareForm)).call(this, props));
 	
-	        var instance = data.cozyDomain;
+	        var instance = appData.cozyDomain;
 	
-	        if (data.cozyDomain.indexOf(':8080') > -1) {
+	        if (appData.cozyDomain.indexOf(':8080') > -1) {
 	            instance = "http://" + instance;
 	        } else {
 	            instance = "https://" + instance;
@@ -39817,6 +39817,14 @@
 	            if (this.state.contactid == '') {
 	                this.createRecipientAndShare(formData);
 	            } else {
+	                var rec = {
+	                    type: "io.cozy.contacts",
+	                    id: this.state.contactid
+	                };
+	                var recipients = [{
+	                    recipient: rec
+	                }];
+	                formData.recipients = recipients;
 	                this.createSharing(formData);
 	            }
 	        }
@@ -39834,7 +39842,7 @@
 	            // Create the recipient
 	            this.sendXHR(recipientTarget, recipient, function (res) {
 	                var rec = {
-	                    type: "io.cozy.recipients",
+	                    type: "io.cozy.contacts",
 	                    id: res.id
 	                };
 	                var recipients = [{
@@ -39852,9 +39860,9 @@
 	    }, {
 	        key: 'createSharing',
 	        value: function createSharing(formData) {
-	            var sharingTarget = _this.state.instance + "/sharings/";
+	            var sharingTarget = this.state.instance + "/sharings/";
 	            // Create the sharing
-	            _this.sendXHR(sharingTarget, formData, function (res) {
+	            this.sendXHR(sharingTarget, formData, function (res) {
 	                console.log("Sharing ok : ", JSON.stringify(res));
 	            });
 	        }
@@ -39875,7 +39883,7 @@
 	            };
 	            xmlhttp.open('POST', target, true);
 	            xmlhttp.setRequestHeader('Content-type', 'application/json');
-	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + data.cozyToken);
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
 	            xmlhttp.send(JSON.stringify(data));
 	        }
 	    }]);
