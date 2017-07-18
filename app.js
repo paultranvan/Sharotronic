@@ -39204,10 +39204,10 @@
 	        var _this2 = _possibleConstructorReturn(this, (GetForm.__proto__ || Object.getPrototypeOf(GetForm)).call(this, props));
 	
 	        var instance = appData.cozyDomain;
-	        if (instance != "cozy.tools:8080") {
-	            instance = "https://" + instance;
-	        } else {
+	        if (appData.cozyDomain.indexOf(':8080') > -1) {
 	            instance = "http://" + instance;
+	        } else {
+	            instance = "https://" + instance;
 	        }
 	        _this2.state = {
 	            instance: instance,
@@ -39363,10 +39363,10 @@
 	        var _this2 = _possibleConstructorReturn(this, (RevocationForm.__proto__ || Object.getPrototypeOf(RevocationForm)).call(this, props));
 	
 	        var instance = appData.cozyDomain;
-	        if (instance != "cozy.tools:8080") {
-	            instance = "https://" + instance;
-	        } else {
+	        if (appData.cozyDomain.indexOf(':8080') > -1) {
 	            instance = "http://" + instance;
+	        } else {
+	            instance = "https://" + instance;
 	        }
 	        _this2.state = {
 	            instance: instance,
@@ -39603,6 +39603,7 @@
 	            url: '',
 	            sharingType: '',
 	            contactid: '',
+	            contactid2: '',
 	            slug: 'sharotronic',
 	            desc: 'Share it share it !'
 	        };
@@ -39728,6 +39729,21 @@
 	                        _react2.default.createElement(
 	                            'label',
 	                            null,
+	                            'With who? (optionnal) '
+	                        ),
+	                        _react2.default.createElement('input', {
+	                            type: 'text',
+	                            name: 'contactid2',
+	                            placeholder: 'ContactID',
+	                            value: this.state.contactid2,
+	                            onInput: this.handleInputChange })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        _react2.default.createElement(
+	                            'label',
+	                            null,
 	                            'One-shot',
 	                            _react2.default.createElement('input', {
 	                                name: 'sharingType',
@@ -39822,13 +39838,19 @@
 	            if (this.state.contactid == '') {
 	                this.createRecipientAndShare(formData);
 	            } else {
+	                var recipients = [];
 	                var rec = {
 	                    type: "io.cozy.contacts",
 	                    id: this.state.contactid
 	                };
-	                var recipients = [{
-	                    recipient: rec
-	                }];
+	                recipients.push({ recipient: rec });
+	                if (this.state.contactid2 != '') {
+	                    var rec2 = {
+	                        type: "io.cozy.contacts",
+	                        id: this.state.contactid2
+	                    };
+	                    recipients.push({ recipient: rec2 });
+	                }
 	                formData.recipients = recipients;
 	                this.createSharing(formData);
 	            }
@@ -39840,7 +39862,6 @@
 	                email: this.state.email,
 	                url: this.state.url
 	            };
-	            console.log("instance : ", this.state.instance);
 	
 	            var _this = this;
 	            var recipientTarget = this.state.instance + "/sharings/recipient";
@@ -39947,10 +39968,10 @@
 	        var _this2 = _possibleConstructorReturn(this, (DestForm.__proto__ || Object.getPrototypeOf(DestForm)).call(this, props));
 	
 	        var instance = appData.cozyDomain;
-	        if (instance != "cozy.tools:8080") {
-	            instance = "https://" + instance;
-	        } else {
+	        if (appData.cozyDomain.indexOf(':8080') > -1) {
 	            instance = "http://" + instance;
+	        } else {
+	            instance = "https://" + instance;
 	        }
 	        _this2.state = {
 	            instance: instance,
