@@ -26,6 +26,7 @@ class ShareForm extends React.Component {
             url: '',
             sharingType: '',
             contactid: '',
+            contactid2: '',
             slug: 'sharotronic',
             desc: 'Share it share it !'
         };
@@ -124,6 +125,16 @@ class ShareForm extends React.Component {
 
                     </div>
                     <div>
+                        <label>With who? (optionnal) </label>
+                        <input
+                            type='text'
+                            name="contactid2"
+                            placeholder='ContactID'
+                            value={this.state.contactid2}
+                            onInput={this.handleInputChange} >
+                        </input>
+                    </div>
+                    <div>
                         <label>
                             One-shot
                             <input
@@ -209,13 +220,19 @@ class ShareForm extends React.Component {
           this.createRecipientAndShare(formData)
         }
         else {
+            var recipients = []
           var rec = {
               type: "io.cozy.contacts",
               id: this.state.contactid
           };
-          var recipients = [{
-              recipient: rec
-          }];
+          recipients.push({recipient: rec});
+          if (this.state.contactid2 != '') {
+              var rec2 = {
+                  type: "io.cozy.contacts",
+                  id: this.state.contactid2
+              };
+              recipients.push({recipient: rec2});
+          }
           formData.recipients = recipients
           this.createSharing(formData)
         }
@@ -227,7 +244,6 @@ class ShareForm extends React.Component {
             email: this.state.email,
             url: this.state.url
         }
-        console.log("instance : ", this.state.instance)
 
         var _this = this;
         var recipientTarget = this.state.instance + "/sharings/recipient"
