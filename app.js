@@ -40030,7 +40030,7 @@
 	    }, {
 	        key: 'sendFormData',
 	        value: function sendFormData() {
-	            var target = this.state.instance + "/app/destinationDirectory?slug=" + this.state.slug + "&doctype=io.cozy.files&dirID=" + this.state.dirID;
+	            var target = this.state.instance + "/sharings/app/destinationDirectory?slug=" + this.state.slug + "&doctype=io.cozy.files&dirID=" + this.state.dirID;
 	            console.log("target : " + target);
 	
 	            this.sendXHR("POST", target, null, function (res) {
