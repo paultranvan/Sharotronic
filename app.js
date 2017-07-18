@@ -38863,7 +38863,11 @@
 	
 	var _ShareForm2 = _interopRequireDefault(_ShareForm);
 	
-	var _Tips = __webpack_require__(380);
+	var _DestFolder = __webpack_require__(380);
+	
+	var _DestFolder2 = _interopRequireDefault(_DestFolder);
+	
+	var _Tips = __webpack_require__(381);
 	
 	var _Tips2 = _interopRequireDefault(_Tips);
 	
@@ -38871,7 +38875,7 @@
 	
 	var App = function App(_ref) {
 	    var t = _ref.t;
-	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_GetSharing2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}), _react2.default.createElement(_Revocation2.default, {}), _react2.default.createElement(_Tips2.default, {}));
+	    return _react2.default.createElement('div', {}, _react2.default.createElement(_ShareForm2.default, {}), _react2.default.createElement(_GetSharing2.default, {}), _react2.default.createElement(_AddRecipient2.default, {}), _react2.default.createElement(_Revocation2.default, {}), _react2.default.createElement(_DestFolder2.default, {}), _react2.default.createElement(_Tips2.default, {}));
 	};
 	
 	exports.default = (0, _I18n.translate)()(App);
@@ -39901,6 +39905,172 @@
 
 /***/ },
 /* 380 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(198);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _I18n = __webpack_require__(201);
+	
+	var _classnames = __webpack_require__(375);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var appData = document.querySelector('[role=application]').dataset;
+	
+	var DestForm = function (_React$Component) {
+	    _inherits(DestForm, _React$Component);
+	
+	    function DestForm(props) {
+	        _classCallCheck(this, DestForm);
+	
+	        var _this2 = _possibleConstructorReturn(this, (DestForm.__proto__ || Object.getPrototypeOf(DestForm)).call(this, props));
+	
+	        var instance = appData.cozyDomain;
+	        if (instance != "cozy.tools:8080") {
+	            instance = "https://" + instance;
+	        } else {
+	            instance = "http://" + instance;
+	        }
+	        _this2.state = {
+	            instance: instance,
+	            slug: '',
+	            dirID: ''
+	        };
+	        _this2.handleInputChange = _this2.handleInputChange.bind(_this2);
+	        _this2.onSubmit = _this2.onSubmit.bind(_this2);
+	        return _this2;
+	    }
+	
+	    _createClass(DestForm, [{
+	        key: 'handleInputChange',
+	        value: function handleInputChange(event) {
+	            var target = event.target;
+	            var value = target.value;
+	            var name = target.name;
+	
+	            this.setState(_defineProperty({}, name, value));
+	        }
+	    }, {
+	        key: 'onSubmit',
+	        value: function onSubmit(event) {
+	            event.preventDefault();
+	            this.setState({}, this.sendFormData);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Set destination folder'
+	                ),
+	                _react2.default.createElement(
+	                    'form',
+	                    { onSubmit: this.onSubmit },
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        _react2.default.createElement(
+	                            'label',
+	                            null,
+	                            'Which directory? '
+	                        ),
+	                        _react2.default.createElement('input', {
+	                            type: 'text',
+	                            name: 'instance',
+	                            placeholder: this.state.instance,
+	                            value: this.state.instance,
+	                            onInput: this.handleInputChange }),
+	                        _react2.default.createElement('input', {
+	                            type: 'text',
+	                            name: 'slug',
+	                            placeholder: 'App slug',
+	                            value: this.state.slug,
+	                            onInput: this.handleInputChange }),
+	                        _react2.default.createElement('input', {
+	                            type: 'text',
+	                            name: 'destfolder',
+	                            placeholder: 'Destination folder ID',
+	                            value: this.state.dirID,
+	                            onInput: this.handleInputChange })
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { type: 'submit' },
+	                        'Set folder'
+	                    )
+	                ),
+	                _react2.default.createElement('hr', null)
+	            );
+	        }
+	    }, {
+	        key: 'sendFormData',
+	        value: function sendFormData() {
+	            var target = this.state.instance + "/app/destinationDirectory?slug=" + this.state.slug + "&doctype=io.cozy.files&dirID=" + this.state.dirID;
+	            console.log("target : " + target);
+	
+	            this.sendXHR("POST", target, null, function (res) {
+	                console.log("set dest : ", JSON.stringify(res));
+	            });
+	        }
+	    }, {
+	        key: 'sendXHR',
+	        value: function sendXHR(method, target, data, callback) {
+	            var xmlhttp = new XMLHttpRequest();
+	            var _this = this;
+	            xmlhttp.onreadystatechange = function () {
+	                if (xmlhttp.readyState === 4) {
+	                    var response = xmlhttp.responseText;
+	                    if (xmlhttp.status === 200 || xmlhttp.status === 201) {
+	                        var data = JSON.parse(response).data;
+	                        callback(data);
+	                    } else {
+	                        console.log("error : ", JSON.stringify(response));
+	                    }
+	                }
+	            };
+	            xmlhttp.open(method, target, true);
+	            xmlhttp.setRequestHeader('Content-type', 'application/json');
+	            xmlhttp.setRequestHeader('Authorization', 'Bearer ' + appData.cozyToken);
+	            xmlhttp.send(JSON.stringify(data));
+	        }
+	    }]);
+	
+	    return DestForm;
+	}(_react2.default.Component);
+	
+	var DestFolder = function DestFolder(_ref) {
+	    var t = _ref.t;
+	    return _react2.default.createElement(DestForm, {});
+	};
+	
+	exports.default = (0, _I18n.translate)()(DestFolder);
+
+/***/ },
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
