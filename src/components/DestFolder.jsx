@@ -8,11 +8,11 @@ class DestForm extends React.Component {
     constructor(props) {
         super(props)
         var instance = appData.cozyDomain
-        if(instance != "cozy.tools:8080") {
-            instance = "https://"+instance
+        if(appData.cozyDomain.indexOf(':8080') > -1) {
+            instance = "http://"+instance
         }
         else {
-            instance = "http://"+instance
+            instance = "https://"+instance
         }
         this.state = {
             instance: instance,
