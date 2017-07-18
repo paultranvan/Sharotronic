@@ -17,7 +17,7 @@ class RevocationForm extends React.Component {
         this.state = {
             instance: instance,
             sharingid: '',
-            clientid: '',
+            contactid: '',
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onRevokeSharingSubmit = this.onRevokeSharingSubmit.bind(this);
@@ -90,9 +90,9 @@ class RevocationForm extends React.Component {
                       </input>
                       <input
                           type='text'
-                          name="clientid"
-                          placeholder='ClientID'
-                          value={this.state.clientid}
+                          name="contactid"
+                          placeholder='ContactID'
+                          value={this.state.contactid}
                           onInput={this.handleInputChange} >
                       </input>
                       </div>
@@ -116,7 +116,7 @@ class RevocationForm extends React.Component {
 
     revokeRecipient () {
       var sid = this.state.sharingid
-      var cid = this.state.clientid
+      var cid = this.state.contactid
       console.log("revoke " + cid + " for sharing " + sid)
       var target = this.state.instance+"/sharings/" + sid + "/recipient/" + cid
       this.sendXHR("DELETE", target, null, function(res) {
