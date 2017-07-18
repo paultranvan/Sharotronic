@@ -7,6 +7,7 @@ import AddRecipient from './AddRecipient'
 import GetSharing from './GetSharing'
 import Revocation from './Revocation'
 import Share from './ShareForm'
+import DestFolder from './DestFolder'
 import Tips from './Tips'
 
 const App = ({ t }) => (
@@ -15,6 +16,7 @@ const App = ({ t }) => (
         React.createElement(GetSharing, {}),
         React.createElement(AddRecipient, {}),
         React.createElement(Revocation, {}),
+        React.createElement(DestFolder, {}),
         React.createElement(Tips, {})
     )
 )
